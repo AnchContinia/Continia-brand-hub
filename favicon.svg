@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Continia">
+  <!-- Continia mark. Tech Blue ground, white mark, one radius on the box.
+       Same artwork and geometry as the Marketing Hub favicon, so a tab from
+       either property reads as the same company. -->
+  <rect width="64" height="64" rx="16" fill="#052975"/>
+  <g transform="translate(15.1 16.4) scale(0.08937)" fill="#fff">
+    <path d="M189.09,174.61v174.51H0c0-96.4,78.11-174.51,174.51-174.51h14.58Z"/>
+    <path d="M189.09,174.61V0h189.09c0,96.4-78.11,174.51-174.51,174.51h-14.58v.1Z"/>
+  </g>
+</svg>

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Continia Brand Hub</title>
+<meta name="description" content="The official Continia brand guidelines 2.0 — logo, colors, typography, graphics, icons, photography, print, digital and video. One place for every Continian to look things up.">
+<meta name="theme-color" content="#052975">
+<link rel="icon" href="favicon.svg?v=1" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=1" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=1">
+<link rel="preload" href="Assets/fonts/AllianceNo2-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="Assets/fonts/AllianceNo2-Bold.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="Assets/css/hub.css">
+<script src="https://kit.fontawesome.com/c11880975e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- inline icon sprite (UI essentials that must render without the Font Awesome kit) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 16 16"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-info" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 9v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="10" cy="6.2" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-download" viewBox="0 0 16 16"><path d="M8 2v8M4.5 6.8L8 10.2l3.5-3.4M2.5 13.5h11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.75" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 16 16"><rect x="1.75" y="3.25" width="12.5" height="9.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2.5 4.5L8 8.75l5.5-4.25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cursor" viewBox="0 0 48 48"><path d="M17 6.5c0-1.9 1.6-3.5 3.5-3.5S24 4.6 24 6.5v15.2l.6-.1c1.7-.3 3.3.6 3.9 2.1 1.6-.9 3.7-.4 4.6 1.2 1.6-.6 3.5.1 4.3 1.7.3.6.4 1.2.4 1.8V35c0 5.5-4.5 10-10 10h-4.6c-3 0-5.8-1.3-7.7-3.6l-8.3-10.2c-1.2-1.4-1-3.6.4-4.8 1.4-1.2 3.5-1.1 4.8.3L17 31V6.5z" fill="currentColor" stroke="#052975" stroke-width="2" stroke-linejoin="round"/><path d="M8 9l-4-3M8 15H3M12 4L10 0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="fifth" viewBox="0 0 1230.19 1139.72"><path fill="currentColor" d="M660.34,542.96h-18.35V53.77h533.75c-14.05,272.14-239.85,489.19-515.4,489.19M588.22,1085.96H54.45c14.04-272.14,239.85-489.22,515.42-489.22h18.35v489.22ZM588.22,0v542.96h-18.35C255.65,542.96,0,798.62,0,1112.84v26.88h641.99v-542.99h18.35c314.22,0,569.85-255.63,569.85-569.84V0h-641.97Z"/></symbol>
+</svg>
+
+<!-- ===================== mobile top bar ===================== -->
+<header class="topbar">
+  <a href="#welcome"><img src="Assets/logos/continia-primary-white.svg" alt="Continia"></a>
+  <button id="nav-toggle" type="button" aria-expanded="false" aria-controls="sidebar"><svg><use href="#i-menu"/></svg>Menu</button>
+</header>
+<div class="scrim" aria-hidden="true"></div>
+
+<!-- ===================== sidebar ===================== -->
+<aside class="sidebar" id="sidebar" aria-label="Brand guide navigation">
+  <svg class="sidebar__watermark" aria-hidden="true"><use href="#fifth"/></svg>
+
+  <div class="sidebar__head">
+    <a class="sidebar__logo" href="#welcome"><img src="Assets/logos/continia-primary-white.svg" alt="Continia — back to top"></a>
+    <div class="sidebar__tag">Brand hub · Guidelines 2.0</div>
+
+    <div class="search" role="search">
+      <label class="sr-only" for="search">Search the brand guide</label>
+      <svg aria-hidden="true"><use href="#i-search"/></svg>
+      <input id="search" type="search" placeholder="Search the guide  ( / )" autocomplete="off" aria-controls="search-results" aria-expanded="false">
+      <ul class="search__results" id="search-results" hidden></ul>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <ol>
+      <li><a href="#welcome"><span>00</span>Welcome</a></li>
+      <li><a href="#core-values"><span>01</span>Core values</a></li>
+      <li><a href="#brand-story"><span>02</span>Brand story</a></li>
+      <li><a href="#logo"><span>03</span>Our logo</a></li>
+      <li><a href="#graphics"><span>04</span>Graphics &amp; 5th element</a></li>
+      <li><a href="#colors"><span>05</span>Our colors</a></li>
+      <li><a href="#typography"><span>06</span>Typography</a></li>
+      <li><a href="#icons"><span>07</span>Icons</a></li>
+      <li><a href="#photography"><span>08</span>Photography</a></li>
+      <li><a href="#print"><span>09</span>Print media</a></li>
+      <li><a href="#digital"><span>10</span>Digital media</a></li>
+      <li><a href="#video"><span>11</span>Videography</a></li>
+      <li><a href="#assets"><span>12</span>Brand assets</a></li>
+    </ol>
+  </nav>
+
+  <div class="sidebar__foot">
+    <a class="btn btn--innovation btn--sm btn--block" href="Assets/Continia_BrandGuide_2.0_compressed.pdf" download><svg aria-hidden="true"><use href="#i-download"/></svg>Download PDF guide</a>
+    <p>Questions about the brand? Contact the marketing team.</p>
+  </div>
+</aside>
+
+<main class="main" id="main">
+
+  <!-- ===================== 00 WELCOME ===================== -->
+  <section class="hero" id="welcome" data-chapter="Welcome">
+    <svg class="hero__fifth" aria-hidden="true"><use href="#fifth"/></svg>
+    <div class="wrap">
+      <span class="eyebrow">C o n t i n i a &nbsp;·&nbsp; Brand guidelines</span>
+      <h1>Brand guidelines <span>2.0</span></h1>
+      <p>Welcome to the official Continia brand guide. This is your roadmap to everything you need to know about the Continia brand — from the logo and colors to photos, print and video.</p>
+      <div class="hero__actions">
+        <a class="btn btn--innovation" href="#logo">Start with the logo <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost" href="Assets/Continia_BrandGuide_2.0_compressed.pdf" download><svg aria-hidden="true"><use href="#i-download"/></svg>Download PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="quick" aria-label="Chapters">
+      <a href="#core-values"><span>01</span>Core values</a>
+      <a href="#brand-story"><span>02</span>Brand story</a>
+      <a href="#logo"><span>03</span>Our logo</a>
+      <a href="#graphics"><span>04</span>Graphics &amp; 5th element</a>
+      <a href="#colors"><span>05</span>Our colors</a>
+      <a href="#typography"><span>06</span>Typography</a>
+      <a href="#icons"><span>07</span>Icons</a>
+      <a href="#photography"><span>08</span>Photography</a>
+      <a href="#print"><span>09</span>Print media</a>
+      <a href="#digital"><span>10</span>Digital media</a>
+      <a href="#video"><span>11</span>Videography</a>
+      <a href="#assets"><span>12</span>Brand assets</a>
+    </nav>
+
+    <!-- ===================== 01 CORE VALUES ===================== -->
+    <section class="chapter" id="core-values" data-chapter="Core values">
+      <span class="eyebrow">01 · Core values</span>
+      <h2>The core values of Continia</h2>
+      <p class="lead">Four values guide how we work — with our customers, our partners and each other.</p>
+
+      <div class="grid grid--2">
+        <article class="value value--dark">
+          <h4>We dig in</h4>
+          <ul>
+            <li><svg><use href="#i-check"/></svg>We view challenges as exciting opportunities</li>
+            <li><svg><use href="#i-check"/></svg>We keep up-to-date and use the latest technology</li>
+            <li><svg><use href="#i-check"/></svg>We develop our skills and encourage high-quality solutions</li>
+            <li><svg><use href="#i-check"/></svg>We’re persistent and solution-driven</li>
+          </ul>
+        </article>
+        <article class="value value--light">
+          <h4>We grow together</h4>
+          <ul>
+            <li><svg><use href="#i-check"/></svg>We embrace and respect individual differences</li>
+            <li><svg><use href="#i-check"/></svg>We trust each other and value strong relations</li>
+            <li><svg><use href="#i-check"/></svg>We communicate respectfully</li>
+            <li><svg><use href="#i-check"/></svg>We give and receive constructive feedback</li>
+          </ul>
+        </article>
+        <article class="value value--dark">
+          <h4>Count on Continia</h4>
+          <ul>
+            <li><svg><use href="#i-check"/></svg>We practice a “can-do” attitude</li>
+            <li><svg><use href="#i-check"/></svg>We deliver what we promise in due time</li>
+            <li><svg><use href="#i-check"/></svg>We listen and share experiences, knowledge, and solutions</li>
+            <li><svg><use href="#i-check"/></svg>We’re accountable and always go the extra mile</li>
+          </ul>
+        </article>
+        <article class="value value--light">
+          <h4>We work smart</h4>
+          <ul>
+            <li><svg><use href="#i-check"/></svg>We share our knowledge and individual strengths</li>
+            <li><svg><use href="#i-check"/></svg>We’re innovative and driven by automation</li>
+            <li><svg><use href="#i-check"/></svg>We use our common sense</li>
+            <li><svg><use href="#i-check"/></svg>We benefit from diversity and various skillsets</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== 02 BRAND STORY ===================== -->
+    <section class="chapter" id="brand-story" data-chapter="Brand story">
+      <span class="eyebrow">02 · Brand story</span>
+      <h2>Who are we?</h2>
+      <p class="lead">Times are continuously changing, but you can always count on Continia. Count on us to dig in, understand your challenges, and engineer solutions — available to the international market through our local partners.</p>
+
+      <div class="prose">
+        <p>Our intelligent solutions add significant value to people and businesses by optimizing two of the most valuable commodities: <strong>time and data</strong>.</p>
+        <p>We get time to work for you by developing practical, reliable, easy-to-use, and price-competitive software solutions. Continia solutions automate and digitalize workflows in the backbone of most companies: the financial department.</p>
+        <p>With more than 30 years of experience, we know that you can’t buy back time. Don’t waste it — spend it wisely.</p>
+        <p>To us, time is everything. Our clients count on our solutions and support for their businesses to run smoothly and seamlessly every day — that’s our promise to you. We also ensure we can count on each other as colleagues and fellow Continians.</p>
+        <p>All Continians believe that time is the most valuable asset in business and life. Ask us what we do and whether you should work with us. We’ll say: <em>It’s about time!</em></p>
+      </div>
+
+      <div class="payoff">
+        <svg aria-hidden="true"><use href="#fifth"/></svg>
+        <p>Our payoff: <span>It’s about time.</span></p>
+        <small>Use it when the message is about the value of time — our promise to customers and partners.</small>
+      </div>
+
+      <div class="block" id="tone-of-voice">
+        <h3>How we sound</h3>
+        <p>Confident, helpful, clear and human. Not overly playful, not corporate-stiff. The throughline is reliability: you can count on us.</p>
+        <div class="grid grid--3">
+          <div class="card"><h4>“We” talk to “you”</h4><p>We speak as Continia (“we”, Continians) and address the reader directly as “you”. Warm and direct.</p></div>
+          <div class="card"><h4>Short and declarative</h4><p>Like our values: <em>We dig in. We work smart.</em> Say it plainly, lead with the benefit.</p></div>
+          <div class="card"><h4>Real numbers</h4><p>Use concrete, verified figures — e.g. 30+ years of experience. Never invent filler stats.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 03 LOGO ===================== -->
+    <section class="chapter" id="logo" data-chapter="Our logo">
+      <span class="eyebrow">03 · Our logo</span>
+      <h2>The Continia logo</h2>
+      <p class="lead">The logomark symbolizes two entities intersecting with each other, while also vaguely resembling the silhouette of an hourglass. It serves as a subtle nod to the value and functional features of Continia’s solutions.</p>
+
+      <div class="block" id="company-name">
+        <h3>Company name</h3>
+        <p>In 2009, Celenia Software announced the sale of its transaction-based add-ons to six former colleagues. The new company was named Continia, merging the words “continue” and “Celenia” — symbolizing that Continia is a continuation of Celenia.</p>
+      </div>
+
+      <div class="block" id="logo-variants">
+        <h3>Logo variants</h3>
+        <p>There are three variants of the logo. In nearly every case, use the primary logo.</p>
+        <div class="grid grid--3">
+          <div class="logo-tile">
+            <div class="logo-tile__stage"><img src="Assets/logos/continia-primary-techblue.svg" alt="Continia primary logo"></div>
+            <div class="logo-tile__body">
+              <span class="eyebrow">Primary</span>
+              <p>The primary version of Continia’s visual profile. In nearly every use case, this is the logo you should use.</p>
+              <div class="logo-tile__dl">
+                <a class="btn btn--line btn--sm" href="Assets/logos/continia-primary-techblue.svg" download><svg><use href="#i-download"/></svg>Tech Blue SVG</a>
+                <a class="btn btn--line btn--sm" href="Assets/logos/continia-primary-white.svg" download><svg><use href="#i-download"/></svg>White SVG</a>
+              </div>
+            </div>
+          </div>
+          <div class="logo-tile">
+            <div class="logo-tile__stage">
+              <span class="lockup-payoff"><img src="Assets/logos/continia-primary-techblue.svg" alt="Continia logo with payoff"><span>It’s About Time</span></span>
+            </div>
+            <div class="logo-tile__body">
+              <span class="eyebrow">Primary with payoff</span>
+              <p>Use only when the purpose is to highlight or emphasize “It’s about time.” Ask marketing for the production file.</p>
+            </div>
+          </div>
+          <div class="logo-tile">
+            <div class="logo-tile__stage"><img class="logo-secondary" src="Assets/logos/continia-secondary-techblue.svg" alt="Continia secondary logo (wordmark)"></div>
+            <div class="logo-tile__body">
+              <span class="eyebrow">Secondary</span>
+              <p>Only for highly specific cases where the logomark has been relocated elsewhere on the canvas or visual surface of the design.</p>
+              <div class="logo-tile__dl">
+                <a class="btn btn--line btn--sm" href="Assets/logos/continia-secondary-techblue.svg" download><svg><use href="#i-download"/></svg>Tech Blue SVG</a>
+                <a class="btn btn--line btn--sm" href="Assets/logos/continia-secondary-white.svg" download><svg><use href="#i-download"/></svg>White SVG</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block" id="positive-negative">
+        <h3>Positive and negative</h3>
+        <p>Negative is used on dark and colored backgrounds. Positive is used on light and neutral backgrounds.</p>
+        <div class="grid grid--3">
+          <div class="logo-tile">
+            <div class="logo-tile__stage logo-tile__stage--dark"><img src="Assets/logos/continia-primary-white.svg" alt="Negative Continia logo on Tech Blue"></div>
+            <div class="logo-tile__body"><span class="eyebrow">Negative</span><p>White logo on Tech Blue, photos and colored backgrounds.</p></div>
+          </div>
+          <div class="logo-tile">
+            <div class="logo-tile__stage"><img src="Assets/logos/continia-primary-techblue.svg" alt="Positive Continia logo on white"></div>
+            <div class="logo-tile__body"><span class="eyebrow">Positive</span><p>Tech Blue logo on white and neutral backgrounds.</p></div>
+          </div>
+          <div class="logo-tile">
+            <div class="logo-tile__stage logo-tile__stage--light"><img src="Assets/logos/continia-primary-techblue.svg" alt="Positive Continia logo on Light Blue"></div>
+            <div class="logo-tile__body">
+              <span class="eyebrow">Logomark only</span>
+              <p>The hourglass mark on its own — e.g. for avatars and small spaces.</p>
+              <div class="logo-tile__dl">
+                <a class="btn btn--line btn--sm" href="Assets/logos/continia-logomark-techblue.svg" download><svg><use href="#i-download"/></svg>Tech Blue</a>
+                <a class="btn btn--line btn--sm" href="Assets/logos/continia-logomark-white.svg" download><svg><use href="#i-download"/></svg>White</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block" id="respect-distance">
+        <h3>Respect distance</h3>
+        <p>There should always be clear space around the logo to ensure readability. The minimum distance between our logo and other elements is the “respect distance.” It is defined by the x-height of our name feature and measured starting from the “C” in the logo.</p>
+        <p>These guidelines must always be followed to ensure a professional appearance across media and contexts.</p>
+        <div class="figs figs--2">
+          <figure class="popup" data-p="13" data-cap="Respect distance = x-height of the “C”"></figure>
+          <figure class="popup" data-p="14" data-cap="Correct use of the primary logo"></figure>
+        </div>
+      </div>
+
+      <div class="block" id="logo-dont">
+        <h3>Please do not</h3>
+        <p>The same rules also apply to the solution logos.</p>
+        <ul class="dont-list">
+          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Trim the logo.</li>
+          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Rotate or squash/stretch the logo.</li>
+          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Outline the logo.</li>
+          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Use obvious effects on the logo.</li>
+          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Use the logo on low-contrast backgrounds.</li>
+          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Fill the logo with gradients.</li>
+          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Change the spacing between the hourglass icon and “continia”.</li>
+          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Change the color to anything other than Tech Blue, Innovation Blue, Light Blue or White.</li>
+        </ul>
+        <div class="figs">
+          <figure class="popup" data-p="11" data-cap="Logo misuse examples"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 04 GRAPHICS ===================== -->
+    <section class="chapter" id="graphics" data-chapter="Graphics & 5th element">
+      <span class="eyebrow">04 · Graphics &amp; 5th element</span>
+      <h2>Graphics &amp; the 5th element</h2>
+      <p class="lead">Our graphic elements are all derived from the logo. Use them to create playful, recognizable visuals across every touchpoint.</p>
+
+      <div class="block" id="quarter-circle">
+        <h3>Quarter circle</h3>
+        <p>In the logo icon and above the “i”s in Continia, you’ll find quarter-circle graphics. These elements can be used to create playful and exciting visuals.</p>
+        <div class="grid grid--2">
+          <div class="demo demo--light"><div class="qc"></div><div class="demo__label"><strong>Quarter circle</strong><span>One large rounded corner</span></div></div>
+          <figure class="popup" data-p="17" data-cap="Quarter circle on a brochure cover"></figure>
+        </div>
+      </div>
+
+      <div class="block" id="full-circle">
+        <h3>Full circle</h3>
+        <p>A combination of all four quarters forms a perfect circle. This circle can also be used to add an extra playful touch to our visuals.</p>
+        <div class="grid grid--2">
+          <div class="demo demo--light"><div class="fc"></div><div class="demo__label"><strong>Full circle</strong><span>Four quarters combined</span></div></div>
+          <figure class="popup" data-p="19" data-cap="Full circle behind product imagery"></figure>
+        </div>
+      </div>
+
+      <div class="block" id="ui-elements">
+        <h3>UI elements</h3>
+        <p>UI elements mimic real-life user interface components. The pop-up window is used to display solutions, Business Central screenshots, videos, images or thumbnails. Buttons indicate specific actions related to the content in the pop-up window. The mouse cursor is often included to emphasize that a button is clickable.</p>
+        <div class="ui-demo">
+          <div class="ui-window">
+            <div class="popup__bar"><img src="Assets/logos/continia-logomark-white.svg" alt="">continia<span class="popup__dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <div class="ui-window__body">
+              <h4>Pop-up window</h4>
+              <p>Frame screenshots, videos and images in a Tech Blue title bar with the logomark.</p>
+              <div class="ui-window__line"></div><div class="ui-window__line"></div><div class="ui-window__line"></div>
+            </div>
+          </div>
+          <div class="ui-stack">
+            <span class="btn btn--primary">See more</span>
+            <span class="btn btn--innovation">See more</span>
+            <span class="btn btn--purple">See more</span>
+            <svg class="ui-cursor" aria-hidden="true"><use href="#i-cursor"/></svg>
+          </div>
+        </div>
+        <div class="figs figs--2">
+          <figure class="popup" data-p="21" data-cap="Pop-up windows, buttons, mouse cursor + click"></figure>
+          <figure class="popup" data-p="22" data-cap="UI elements used in images"></figure>
+        </div>
+      </div>
+
+      <div class="block" id="fifth-element">
+        <h3>The 5th element</h3>
+        <p>The 5th element is a visual tool that promotes brand recognition across touchpoints, surfaces and visuals. Rooted in our payoff “It’s about time” and our secondary logo, it acts as a visual extension of our overall identity. It comes in three variants: single, in line and stacked.</p>
+        <div class="grid grid--3">
+          <div class="fifth-tile"><svg viewBox="0 0 1230.19 1139.72" role="img" aria-label="5th element, single"><use href="#fifth"/></svg></div>
+          <div class="fifth-tile fifth-tile--light"><img src="Assets/brand/fifth-element-inline-techblue.svg" alt="5th element, in line"></div>
+          <figure class="popup" data-p="24" data-cap="Variants: single, in line, stacked"></figure>
+        </div>
+        <div class="logo-tile__dl" style="margin-top:18px">
+          <a class="btn btn--line btn--sm" href="Assets/brand/fifth-element-single.svg" download><svg><use href="#i-download"/></svg>Single SVG</a>
+          <a class="btn btn--line btn--sm" href="Assets/brand/fifth-element-inline-innovation.svg" download><svg><use href="#i-download"/></svg>In line SVG</a>
+        </div>
+        <div class="figs">
+          <figure class="popup" data-p="25" data-cap="5th element as a tonal watermark on print"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 05 COLORS ===================== -->
+    <section class="chapter" id="colors" data-chapter="Our colors">
+      <span class="eyebrow">05 · Our colors</span>
+      <h2>The Continia 2.0 color palette</h2>
+      <p class="lead">Two primary brand colors — Tech Blue and Innovation Blue — and one primary functional color, Light Blue. The accent colors are mainly for web and design work that needs color flexibility, such as differentiating products. Use them sparingly.</p>
+
+      <div class="ratio" role="img" aria-label="Use ratio: Tech Blue dominates, then Innovation Blue and Light Blue, accents smallest">
+        <div style="flex:6;background:#052975;color:#fff">Tech Blue</div>
+        <div style="flex:2.4;background:#8ff8ff;color:#052975">Innovation</div>
+        <div style="flex:1.6;background:#def5ff;color:#052975">Light Blue</div>
+        <div style="flex:.7;background:#5f9e8d"></div>
+        <div style="flex:.7;background:#fff7e3"></div>
+        <div style="flex:.7;background:#983eae"></div>
+      </div>
+      <p class="note"><svg aria-hidden="true"><use href="#i-info"/></svg><span>The size of each color represents its recommended use ratio. Click any color to copy its HEX code.</span></p>
+
+      <div class="block" id="primary-colors">
+        <h3>Brand &amp; accent colors</h3>
+        <div class="swatches">
+          <div class="swatch">
+            <button class="swatch__chip" style="background:#052975;color:#fff" data-copy="#052975" data-copy-label="Tech Blue #052975"><small>Main color</small><strong>Tech Blue</strong><em>Copy HEX</em></button>
+            <dl><dt>HEX</dt><dd><button data-copy="#052975">#052975</button></dd><dt>RGB</dt><dd><button data-copy="5, 41, 117">5 / 41 / 117</button></dd><dt>CMYK</dt><dd>96 / 65 / 0 / 56</dd><dt>Pantone</dt><dd>280 C</dd></dl>
+          </div>
+          <div class="swatch">
+            <button class="swatch__chip" style="background:#8ff8ff;color:#052975" data-copy="#8FF8FF" data-copy-label="Innovation Blue #8FF8FF"><small>Secondary color</small><strong>Innovation Blue</strong><em>Copy HEX</em></button>
+            <dl><dt>HEX</dt><dd><button data-copy="#8FF8FF">#8FF8FF</button></dd><dt>RGB</dt><dd><button data-copy="143, 248, 255">143 / 248 / 255</button></dd><dt>CMYK</dt><dd>35 / 0 / 0 / 0</dd><dt>Pantone</dt><dd>310 C</dd></dl>
+          </div>
+          <div class="swatch">
+            <button class="swatch__chip" style="background:#def5ff;color:#052975" data-copy="#DEF5FF" data-copy-label="Light Blue #DEF5FF"><small>Primary functional</small><strong>Light Blue</strong><em>Copy HEX</em></button>
+            <dl><dt>HEX</dt><dd><button data-copy="#DEF5FF">#DEF5FF</button></dd><dt>RGB</dt><dd><button data-copy="222, 245, 255">222 / 245 / 255</button></dd><dt>CMYK</dt><dd>13 / 0 / 3 / 0</dd><dt>Pantone</dt><dd>290 C</dd></dl>
+          </div>
+          <div class="swatch">
+            <button class="swatch__chip" style="background:#5f9e8d;color:#fff" data-copy="#5F9E8D" data-copy-label="Smart Green #5F9E8D"><small>Accent color</small><strong>Smart Green</strong><em>Copy HEX</em></button>
+            <dl><dt>HEX</dt><dd><button data-copy="#5F9E8D">#5F9E8D</button></dd><dt>RGB</dt><dd><button data-copy="95, 158, 141">95 / 158 / 141</button></dd><dt>CMYK</dt><dd>65 / 21 / 49 / 0</dd><dt>Pantone</dt><dd>624 C</dd></dl>
+          </div>
+          <div class="swatch">
+            <button class="swatch__chip" style="background:#fff7e3;color:#052975" data-copy="#FFF7E3" data-copy-label="Light Yellow #FFF7E3"><small>Accent color</small><strong>Light Yellow</strong><em>Copy HEX</em></button>
+            <dl><dt>HEX</dt><dd><button data-copy="#FFF7E3">#FFF7E3</button></dd><dt>RGB</dt><dd><button data-copy="255, 247, 227">255 / 247 / 227</button></dd><dt>CMYK</dt><dd>0 / 3 / 14 / 0</dd><dt>Pantone</dt><dd>7499 C</dd></dl>
+          </div>
+          <div class="swatch">
+            <button class="swatch__chip" style="background:#983eae;color:#fff" data-copy="#983EAE" data-copy-label="Performance Purple #983EAE"><small>Accent color</small><strong>Performance Purple</strong><em>Copy HEX</em></button>
+            <dl><dt>HEX</dt><dd><button data-copy="#983EAE">#983EAE</button></dd><dt>RGB</dt><dd><button data-copy="152, 62, 174">152 / 62 / 174</button></dd><dt>CMYK</dt><dd>50 / 86 / 0 / 0</dd><dt>Pantone</dt><dd>7442 C</dd></dl>
+          </div>
+        </div>
+      </div>
+
+      <div class="block" id="percent-colors">
+        <h3>Percent colors</h3>
+        <p>Tints of the brand and accent colors for backgrounds, panels and variation.</p>
+        <div class="tints">
+          <button class="tint" data-copy="#2A4989"><div style="background:#2a4989"></div><p><strong>Tech Blue 85%</strong><span>#2A4989<br>RGB 42 / 73 / 137</span></p></button>
+          <button class="tint" data-copy="#8193B9"><div style="background:#8193b9"></div><p><strong>Tech Blue 50%</strong><span>#8193B9<br>RGB 129 / 147 / 185</span></p></button>
+          <button class="tint" data-copy="#CDD4E3"><div style="background:#cdd4e3"></div><p><strong>Tech Blue 20%</strong><span>#CDD4E3<br>RGB 205 / 212 / 227</span></p></button>
+          <button class="tint" data-copy="#E7EAF1"><div style="background:#e7eaf1"></div><p><strong>Tech Blue 10%</strong><span>#E7EAF1<br>RGB 231 / 234 / 241</span></p></button>
+          <button class="tint" data-copy="#C6FBFF"><div style="background:#c6fbff"></div><p><strong>Innovation Blue 50%</strong><span>#C6FBFF<br>RGB 198 / 251 / 255</span></p></button>
+          <button class="tint" data-copy="#E9FEFF"><div style="background:#e9feff"></div><p><strong>Innovation Blue 20%</strong><span>#E9FEFF<br>RGB 233 / 254 / 255</span></p></button>
+          <button class="tint" data-copy="#AECEC5"><div style="background:#aecec5"></div><p><strong>Smart Green 50%</strong><span>#AECEC5<br>RGB 174 / 206 / 197</span></p></button>
+          <button class="tint" data-copy="#CFE2DD"><div style="background:#cfe2dd"></div><p><strong>Smart Green 30%</strong><span>#CFE2DD<br>RGB 207 / 226 / 221</span></p></button>
+          <button class="tint" data-copy="#E2C9EE"><div style="background:#e2c9ee"></div><p><strong>Performance Purple 50%</strong><span>#E2C9EE<br>RGB 226 / 201 / 238</span></p></button>
+          <button class="tint" data-copy="#F7EFFA"><div style="background:#f7effa"></div><p><strong>Performance Purple 15%</strong><span>#F7EFFA<br>RGB 247 / 239 / 250</span></p></button>
+        </div>
+      </div>
+
+      <div class="block" id="gradients">
+        <h3>Gradient colors</h3>
+        <p>All gradients run 50/50 between two brand colors. Use them as decoration on large backgrounds and panels — never fill the logo with a gradient.</p>
+        <div class="gradients">
+          <div class="gradient"><div style="background:linear-gradient(135deg,#052975,#8ff8ff)"></div><p>Tech Blue &amp; Innovation Blue<span>#052975 → #8FF8FF</span></p></div>
+          <div class="gradient"><div style="background:linear-gradient(135deg,#8ff8ff,#fff7e3)"></div><p>Innovation Blue &amp; Light Yellow<span>#8FF8FF → #FFF7E3</span></p></div>
+          <div class="gradient"><div style="background:linear-gradient(135deg,#052975,#5f9e8d)"></div><p>Tech Blue &amp; Smart Green<span>#052975 → #5F9E8D</span></p></div>
+          <div class="gradient"><div style="background:linear-gradient(135deg,#5f9e8d,#8ff8ff)"></div><p>Smart Green &amp; Innovation Blue<span>#5F9E8D → #8FF8FF</span></p></div>
+        </div>
+      </div>
+
+      <div class="block" id="colors-in-use">
+        <h3>Correct use of our colors</h3>
+        <p>The brand guide itself primarily uses the brand colors, with the functional colors used sparingly to add variation.</p>
+        <div class="figs figs--2">
+          <figure class="popup" data-p="30" data-cap="Brand colors on a roll-up"></figure>
+          <figure class="popup" data-p="25" data-cap="Tech Blue as the dominant color"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 06 TYPOGRAPHY ===================== -->
+    <section class="chapter" id="typography" data-chapter="Typography">
+      <span class="eyebrow">06 · Typography</span>
+      <h2>Alliance No.2</h2>
+      <p class="lead">Our primary typeface is Alliance No.2 — a modern, techy font that aligns with our industry. Its small quirky details and curves give it a unique, personal touch while keeping a professional appearance.</p>
+
+      <div class="specimen">
+        <div class="specimen__hero">
+          <b>Aa</b>
+          <p>Use Alliance No.2 in both print and digital. Headlines in Bold, subheadlines in Medium, body text in Regular. Semibold is the alternative for headlines.</p>
+        </div>
+        <div class="weights">
+          <div class="weight">
+            <span class="eyebrow">Headline</span>
+            <h4 style="font-weight:700">Alliance No.2 Bold</h4>
+            <p style="font-weight:700">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Xx Yy Zz Ææ Øø Åå 1 2 3 4 5 6 7 8 9 0</p>
+          </div>
+          <div class="weight">
+            <span class="eyebrow">Headline alternative</span>
+            <h4 style="font-weight:600">Alliance No.2 Semibold</h4>
+            <p style="font-weight:600">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Xx Yy Zz Ææ Øø Åå 1 2 3 4 5 6 7 8 9 0</p>
+          </div>
+          <div class="weight">
+            <span class="eyebrow">Subheadline</span>
+            <h4 style="font-weight:600">Alliance No.2 Medium</h4>
+            <p style="font-weight:600">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Xx Yy Zz Ææ Øø Åå 1 2 3 4 5 6 7 8 9 0</p>
+            <small>Web: the webfont package has no Medium cut, so Semibold (600) is used on screen.</small>
+          </div>
+          <div class="weight">
+            <span class="eyebrow">Body text</span>
+            <h4 style="font-weight:400">Alliance No.2 Regular</h4>
+            <p style="font-weight:400">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Xx Yy Zz Ææ Øø Åå 1 2 3 4 5 6 7 8 9 0</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="block" id="type-hierarchy">
+        <h3>Hierarchy on the web</h3>
+        <p>Sentence case for headlines and body. Wide-tracked capitals are reserved for small labels — like the “C O N T I N I A” eyebrow.</p>
+        <div class="scale">
+          <div class="scale__row"><div class="scale__meta"><strong>Display</strong>Bold 700 · 56–88px</div><div style="font-size:clamp(2.25rem,1.4rem + 3vw,3.5rem);font-weight:700;line-height:1.05">It’s about time</div></div>
+          <div class="scale__row"><div class="scale__meta"><strong>Headline</strong>Bold 700 · 32–48px</div><div style="font-size:clamp(1.75rem,1.3rem + 1.6vw,2.5rem);font-weight:700;line-height:1.15">Spend your time on what matters</div></div>
+          <div class="scale__row"><div class="scale__meta"><strong>Subheadline</strong>Semibold 600 · 22–28px</div><div style="font-size:1.5rem;font-weight:600;line-height:1.25">Built inside Business Central</div></div>
+          <div class="scale__row"><div class="scale__meta"><strong>Body</strong>Regular 400 · 16–19px · 1.6</div><div style="color:var(--c-ink)">Continia solutions automate and digitalize workflows in the backbone of most companies: the financial department.</div></div>
+          <div class="scale__row"><div class="scale__meta"><strong>Eyebrow</strong>Semibold 600 · 11px · tracked</div><div style="font-size:.75rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase">C o n t i n i a</div></div>
+        </div>
+      </div>
+
+      <div class="block" id="type-in-use">
+        <h3>Typography in use</h3>
+        <div class="figs figs--2">
+          <figure class="popup" data-p="34" data-cap="Bold, Medium Italic and Regular in a brochure"></figure>
+          <figure class="popup" data-p="35" data-cap="Typography in images"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 07 ICONS ===================== -->
+    <section class="chapter" id="icons" data-chapter="Icons">
+      <span class="eyebrow">07 · Icons</span>
+      <h2>The Font Awesome library</h2>
+      <p class="lead">Our icons come from the Font Awesome library, and the <strong>light</strong> version is the common style across our brand. Icons can explain concepts or be used in a creative, illustrative way.</p>
+      <p class="note"><svg aria-hidden="true"><use href="#i-info"/></svg><span>Want access to the library? Please contact the marketing team.</span></p>
+
+      <div class="block" id="icon-colors">
+        <h3>Icon colors</h3>
+        <p>The only colors allowed for icons are Tech Blue, Innovation Blue, Light Blue and White. A gradient version combining Tech Blue and Innovation Blue is also acceptable.</p>
+        <div class="icon-colors">
+          <div class="icon-color"><i class="fa-light fa-bullseye-arrow" style="color:#052975" aria-hidden="true"></i><span>Tech Blue</span></div>
+          <div class="icon-color"><i class="fa-light fa-bullseye-arrow" style="color:#8ff8ff" aria-hidden="true"></i><span>Innovation Blue</span></div>
+          <div class="icon-color"><i class="fa-light fa-bullseye-arrow" style="color:#def5ff" aria-hidden="true"></i><span>Light Blue</span></div>
+          <div class="icon-color"><i class="fa-light fa-bullseye-arrow" style="color:#fff" aria-hidden="true"></i><span>White</span></div>
+          <div class="icon-color"><i class="fa-light fa-bullseye-arrow grad" aria-hidden="true"></i><span>Tech / Inno gradient</span></div>
+        </div>
+      </div>
+
+      <div class="block" id="icon-words">
+        <h3>Icons for specific words</h3>
+        <p>We associate particular icons with specific words. Use these so the same concept always looks the same.</p>
+        <div class="icon-grid icon-grid--words">
+          <div class="icon-cell"><i class="fa-light fa-inbox-in" aria-hidden="true"></i><span>Download</span><code>fa-inbox-in</code></div>
+          <div class="icon-cell"><i class="fa-light fa-hand-holding-dollar" aria-hidden="true"></i><span>Expense</span><code>fa-hand-holding-dollar</code></div>
+          <div class="icon-cell"><i class="fa-light fa-file-import" aria-hidden="true"></i><span>Import</span><code>fa-file-import</code></div>
+          <div class="icon-cell"><i class="fa-light fa-file-certificate" aria-hidden="true"></i><span>Certification</span><code>fa-file-certificate</code></div>
+          <div class="icon-cell"><i class="fa-light fa-envelope" aria-hidden="true"></i><span>Email</span><code>fa-envelope</code></div>
+          <div class="icon-cell"><i class="fa-light fa-screwdriver-wrench" aria-hidden="true"></i><span>Technical support</span><code>fa-screwdriver-wrench</code></div>
+          <div class="icon-cell"><i class="fa-light fa-shield-keyhole" aria-hidden="true"></i><span>Security</span><code>fa-shield-keyhole</code></div>
+          <div class="icon-cell"><i class="fa-light fa-file-invoice" aria-hidden="true"></i><span>Invoice</span><code>fa-file-invoice</code></div>
+          <div class="icon-cell"><i class="fa-light fa-rocket-launch" aria-hidden="true"></i><span>Release</span><code>fa-rocket-launch</code></div>
+        </div>
+        <div class="figs">
+          <figure class="popup" data-p="38" data-cap="Icon rules — colors and word associations"></figure>
+        </div>
+      </div>
+
+      <div class="block" id="solution-icons">
+        <h3>Solution icons</h3>
+        <p>Continia’s own icons for the solutions live in the team’s Font Awesome kit and use the <code>fa-kit</code> prefix.</p>
+        <div class="icon-grid">
+          <div class="icon-cell"><i class="fa-kit fa-document-capture-solution-dc-icon" aria-hidden="true"></i><span>Document Capture</span></div>
+          <div class="icon-cell"><i class="fa-kit fa-expense-management-solution-em-icon" aria-hidden="true"></i><span>Expense Management</span></div>
+          <div class="icon-cell"><i class="fa-kit fa-banking-solution-cb-icon" aria-hidden="true"></i><span>Continia Banking</span></div>
+          <div class="icon-cell"><i class="fa-kit fa-finance-solution-cf-add-modules--stack-icon" aria-hidden="true"></i><span>Continia Finance</span></div>
+          <div class="icon-cell"><i class="fa-kit fa-document-output-solution-do-icon-file-export" aria-hidden="true"></i><span>Document Output</span></div>
+        </div>
+        <div class="code"><button class="copy-code" type="button">Copy</button><pre>&lt;script src="https://kit.fontawesome.com/c11880975e.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;i class="fa-light fa-download"&gt;&lt;/i&gt;
+&lt;i class="fa-kit fa-document-capture-solution-dc-icon"&gt;&lt;/i&gt;</pre></div>
+      </div>
+
+      <div class="block" id="icons-in-use">
+        <h3>Icons in use</h3>
+        <div class="figs figs--2">
+          <figure class="popup" data-p="39" data-cap="Correct use of icons"></figure>
+          <figure class="popup" data-p="40" data-cap="Creative use of icons"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 08 PHOTOGRAPHY ===================== -->
+    <section class="chapter" id="photography" data-chapter="Photography">
+      <span class="eyebrow">08 · Photography</span>
+      <h2>Our photo style</h2>
+      <p class="lead">Continia’s photography is centered around our employees. The goal is to create a warm and welcoming feeling toward our partners and customers. In specific cases, we also capture scenarios that illustrate features or actions within our solutions.</p>
+
+      <div class="figs figs--2">
+        <figure class="popup" data-p="42" data-cap="Our photo style"></figure>
+        <figure class="popup" data-p="43" data-cap="Imagery focused on our own employees"></figure>
+      </div>
+
+      <div class="block" id="photo-checklist">
+        <h3>Photo checklist</h3>
+        <ul class="do-list">
+          <li><span class="mark mark--yes"><svg><use href="#i-check"/></svg></span><span><strong>Feature our people.</strong> Real Continians, real offices, real partners and customers.</span></li>
+          <li><span class="mark mark--yes"><svg><use href="#i-check"/></svg></span><span><strong>Think composition.</strong> Leave room so the photo can be used in a graphical context with text.</span></li>
+          <li><span class="mark mark--yes"><svg><use href="#i-check"/></svg></span><span><strong>Apply our LUT.</strong> Use the preferred color profile for all photos — indoor or outdoor.</span></li>
+          <li><span class="mark mark--yes"><svg><use href="#i-check"/></svg></span><span><strong>Remove other brands.</strong> Retouch away unnecessary logos from images.</span></li>
+        </ul>
+      </div>
+
+      <div class="block" id="photo-composition">
+        <h3>Favorable photo composition</h3>
+        <p>When taking a photo, keep the composition in mind so it can be used correctly in a graphical context.</p>
+        <div class="figs figs--2">
+          <figure class="popup" data-p="44" data-cap="Leave space for text and graphics"></figure>
+          <figure class="popup" data-p="46" data-cap="Photos that illustrate actions or features"></figure>
+        </div>
+      </div>
+
+      <div class="block" id="photo-lut">
+        <h3>Preferred LUTs</h3>
+        <p>From a post-production standpoint, use our preferred LUT (color profile) for all photos taken. We have specialized LUTs for both indoor and outdoor environments.</p>
+        <div class="figs figs--2">
+          <figure class="popup" data-p="45" data-cap="Before and after the Continia LUT"></figure>
+          <figure class="popup" data-p="48" data-cap="Indoor and outdoor LUTs"></figure>
+        </div>
+      </div>
+
+      <div class="block" id="photo-logos">
+        <h3>Removal of other brands</h3>
+        <p>We make sure to remove unnecessary logos from images.</p>
+        <div class="figs figs--2">
+          <figure class="popup" data-p="47" data-cap="Before and after logo removal"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 09 PRINT ===================== -->
+    <section class="chapter" id="print" data-chapter="Print media">
+      <span class="eyebrow">09 · Print media</span>
+      <h2>Our print media</h2>
+      <p class="lead">We produce various printable media, including conference booths, flyers, brochures and roll-ups. Here are our booth and brochure designs as reference.</p>
+
+      <div class="block" id="booth">
+        <h3>Conference booth — Directions EMEA 2024</h3>
+        <p>The booth consists of four columns, two wings and a four-sided flowerpot. For all conference booths, standard print files are created in Adobe InDesign, and a 3D model is produced in Blender to visualize how the booth will look in real life.</p>
+        <div class="table-scroll">
+          <table class="specs">
+            <thead><tr><th>Element</th><th>Print size</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>Column</td><td class="num">240 × 100 cm</td><td>Four columns, TV mounted in the column</td></tr>
+              <tr><td>Wing</td><td class="num">326 × 80 cm</td><td>Two wings</td></tr>
+              <tr><td>Flowerpot</td><td class="num">40 × 40 × 75 cm</td><td>Four-sided</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="figs figs--3">
+          <figure class="popup" data-p="51" data-cap="Booth schematics"></figure>
+          <figure class="popup" data-p="52" data-cap="Column print in 3D"></figure>
+          <figure class="popup" data-p="53" data-cap="Wing print in 3D"></figure>
+        </div>
+      </div>
+
+      <div class="block" id="brochures">
+        <h3>Brochures</h3>
+        <p>The general Continia brochure explains who Continia is, what each solution does and the specific problems they solve. Format: square, 210 × 210 mm.</p>
+        <div class="figs figs--2">
+          <figure class="popup" data-p="54" data-cap="Square brochure, 210 × 210 mm"></figure>
+          <figure class="popup" data-p="55" data-cap="Brochure spread"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 10 DIGITAL ===================== -->
+    <section class="chapter" id="digital" data-chapter="Digital media">
+      <span class="eyebrow">10 · Digital media</span>
+      <h2>Digital media</h2>
+      <p class="lead">We produce a wide range of digital media — newsletters, videos, animations, carousels and more. Use these formats as your starting point.</p>
+
+      <div class="block" id="digital-formats">
+        <h3>Formats</h3>
+        <div class="table-scroll">
+          <table class="specs">
+            <thead><tr><th>Media</th><th>Size</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>LinkedIn post</td><td class="num">1080 × 1080 px</td><td>Square SoMe post, with an alternative version</td></tr>
+              <tr><td>Newsletter image</td><td class="num">1800 × 900 px</td><td>2:1 header image</td></tr>
+              <tr><td>Carousel</td><td class="num">2000 × 2000 px</td><td>Per slide</td></tr>
+              <tr><td>YouTube thumbnail</td><td class="num">1920 × 1080 px</td><td>See <a href="#thumbnails">Videography</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="figs figs--3">
+          <figure class="popup" data-p="58" data-cap="LinkedIn posts, 1080 × 1080"></figure>
+          <figure class="popup" data-p="59" data-cap="Newsletter image, 1800 × 900"></figure>
+          <figure class="popup" data-p="60" data-cap="Carousel, 2000 × 2000"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 11 VIDEO ===================== -->
+    <section class="chapter" id="video" data-chapter="Videography">
+      <span class="eyebrow">11 · Videography</span>
+      <h2>Our video style</h2>
+      <p class="lead">Our video style inherits many aspects from our photography — LUTs, compositions and use cases — and adds its own: frames per second, transitions, animation effects and social media thumbnails.</p>
+
+      <div class="block" id="video-specs">
+        <h3>Recording specs</h3>
+        <div class="table-scroll">
+          <table class="specs">
+            <thead><tr><th>Type</th><th>Resolution</th><th>Frame rate</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>Video shoot</td><td class="num">3840 × 2160 (4K)</td><td class="num">25 fps</td><td>4K can be recropped to 1:1 (1080 × 1080) for SoMe</td></tr>
+              <tr><td>Screen recording</td><td class="num">3840 × 2160 (4K)</td><td class="num">30 fps</td><td>No effects or transitions — post-production handles it</td></tr>
+              <tr><td>Voice-over</td><td class="num">3840 × 2160 (4K)</td><td class="num">30 fps</td><td>We highly recommend a facecam</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note"><svg aria-hidden="true"><use href="#i-info"/></svg><span>Use our preferred LUT for all filmed video, just like for photos.</span></p>
+        <div class="figs figs--2">
+          <figure class="popup" data-p="66" data-cap="Shoot in 4K at 25 fps"></figure>
+          <figure class="popup" data-p="67" data-cap="Recrop 4K to 1:1 for SoMe"></figure>
+          <figure class="popup" data-p="69" data-cap="Screen recordings without effects"></figure>
+          <figure class="popup" data-p="70" data-cap="Screen recording with facecam"></figure>
+        </div>
+      </div>
+
+      <div class="block" id="thumbnails">
+        <h3>YouTube thumbnails</h3>
+        <p>Thumbnails are 1920 × 1080 px. There are two styles: one for the “What’s New” videos for each solution, and one for a single function in a solution.</p>
+        <div class="figs figs--2">
+          <figure class="popup" data-p="63" data-cap="“What’s New” thumbnail"></figure>
+          <figure class="popup" data-p="64" data-cap="Single-function thumbnail"></figure>
+        </div>
+      </div>
+
+      <div class="block" id="video-lut">
+        <h3>Preferred LUTs for video</h3>
+        <div class="figs figs--2">
+          <figure class="popup" data-p="65" data-cap="Before and after the video LUT"></figure>
+          <figure class="popup" data-p="62" data-cap="Our video style"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 12 ASSETS ===================== -->
+    <section class="chapter" id="assets" data-chapter="Brand assets">
+      <span class="eyebrow">12 · Brand assets</span>
+      <h2>Continia brand assets</h2>
+      <p class="lead">The marketing team has developed a variety of brand assets for the entire organization — PowerPoint and Word templates, business cards, brochures, flyers and more. All aligned with these guidelines.</p>
+
+      <div class="block" id="downloads">
+        <h3>Download here</h3>
+        <div class="grid grid--3">
+          <div class="card"><h4>Brand guide 2.0 (PDF)</h4><p>The full 74-page guide.</p><p style="margin-top:16px"><a class="btn btn--primary btn--sm" href="Assets/Continia_BrandGuide_2.0_compressed.pdf" download><svg><use href="#i-download"/></svg>PDF · 10 MB</a></p></div>
+          <div class="card"><h4>Logos (SVG)</h4><p>Primary, secondary and logomark in Tech Blue and White.</p><p style="margin-top:16px"><a class="btn btn--line btn--sm" href="#logo-variants">Go to logos</a></p></div>
+          <div class="card"><h4>5th element (SVG)</h4><p>Single and in-line variants.</p><p style="margin-top:16px"><a class="btn btn--line btn--sm" href="#fifth-element">Go to 5th element</a></p></div>
+        </div>
+      </div>
+
+      <div class="figs figs--2">
+        <figure class="popup" data-p="72" data-cap="Brand assets"></figure>
+        <figure class="popup" data-p="73" data-cap="Brand asset access"></figure>
+      </div>
+
+      <div class="contact">
+        <div>
+          <h3>Need templates or other brand files?</h3>
+          <p>Templates, business cards, brochures and more are on our internal server and in the marketing repository. Contact the marketing team for access.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn--innovation" href="Assets/Continia_BrandGuide_2.0_compressed.pdf" download><svg><use href="#i-download"/></svg>Brand guide PDF</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>Continia Brand Hub · Based on Brand Guidelines 2.0</span>
+      <span>It’s about time.</span>
+    </div>
+  </footer>
+</main>
+
+<dialog class="lightbox" id="lightbox" aria-label="Enlarged image">
+  <button class="lightbox__close" type="button" aria-label="Close"><svg><use href="#i-x"/></svg></button>
+  <p></p>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="Assets/js/hub.js"></script>
+</body>
+</html>
