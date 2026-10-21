@@ -16,24 +16,15 @@
 </head>
 <body>
 
-<!-- inline icon sprite (UI essentials that must render without the Font Awesome kit) -->
+<!-- 5th element brand graphic, reused as watermark -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-check" viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-x" viewBox="0 0 16 16"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-  <symbol id="i-info" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 9v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="10" cy="6.2" r="1" fill="currentColor"/></symbol>
-  <symbol id="i-download" viewBox="0 0 16 16"><path d="M8 2v8M4.5 6.8L8 10.2l3.5-3.4M2.5 13.5h11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-search" viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.75" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 16 16"><rect x="1.75" y="3.25" width="12.5" height="9.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2.5 4.5L8 8.75l5.5-4.25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
-  <symbol id="i-cursor" viewBox="0 0 48 48"><path d="M17 6.5c0-1.9 1.6-3.5 3.5-3.5S24 4.6 24 6.5v15.2l.6-.1c1.7-.3 3.3.6 3.9 2.1 1.6-.9 3.7-.4 4.6 1.2 1.6-.6 3.5.1 4.3 1.7.3.6.4 1.2.4 1.8V35c0 5.5-4.5 10-10 10h-4.6c-3 0-5.8-1.3-7.7-3.6l-8.3-10.2c-1.2-1.4-1-3.6.4-4.8 1.4-1.2 3.5-1.1 4.8.3L17 31V6.5z" fill="currentColor" stroke="#052975" stroke-width="2" stroke-linejoin="round"/><path d="M8 9l-4-3M8 15H3M12 4L10 0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
   <symbol id="fifth" viewBox="0 0 1230.19 1139.72"><path fill="currentColor" d="M660.34,542.96h-18.35V53.77h533.75c-14.05,272.14-239.85,489.19-515.4,489.19M588.22,1085.96H54.45c14.04-272.14,239.85-489.22,515.42-489.22h18.35v489.22ZM588.22,0v542.96h-18.35C255.65,542.96,0,798.62,0,1112.84v26.88h641.99v-542.99h18.35c314.22,0,569.85-255.63,569.85-569.84V0h-641.97Z"/></symbol>
 </svg>
 
 <!-- ===================== mobile top bar ===================== -->
 <header class="topbar">
   <a href="#welcome"><img src="Assets/logos/continia-primary-white.svg" alt="Continia"></a>
-  <button id="nav-toggle" type="button" aria-expanded="false" aria-controls="sidebar"><svg><use href="#i-menu"/></svg>Menu</button>
+  <button id="nav-toggle" type="button" aria-expanded="false" aria-controls="sidebar"><i class="fa-light fa-bars" aria-hidden="true"></i>Menu</button>
 </header>
 <div class="scrim" aria-hidden="true"></div>
 
@@ -47,7 +38,7 @@
 
     <div class="search" role="search">
       <label class="sr-only" for="search">Search the brand guide</label>
-      <svg aria-hidden="true"><use href="#i-search"/></svg>
+      <i class="fa-light fa-magnifying-glass" aria-hidden="true"></i>
       <input id="search" type="search" placeholder="Search the guide  ( / )" autocomplete="off" aria-controls="search-results" aria-expanded="false">
       <ul class="search__results" id="search-results" hidden></ul>
     </div>
@@ -72,7 +63,7 @@
   </nav>
 
   <div class="sidebar__foot">
-    <a class="btn btn--innovation btn--sm btn--block" href="Assets/Continia_BrandGuide_2.0_compressed.pdf" download><svg aria-hidden="true"><use href="#i-download"/></svg>Download PDF guide</a>
+    <a class="btn btn--innovation btn--sm btn--block" href="Assets/Continia_BrandGuide_2.0_compressed.pdf" download><i class="fa-light fa-download" aria-hidden="true"></i>Download PDF guide</a>
     <p>Questions about the brand? Contact the marketing team.</p>
   </div>
 </aside>
@@ -87,26 +78,26 @@
       <h1>Brand guidelines <span>2.0</span></h1>
       <p>Welcome to the official Continia brand guide. This is your roadmap to everything you need to know about the Continia brand — from the logo and colors to photos, print and video.</p>
       <div class="hero__actions">
-        <a class="btn btn--innovation" href="#logo">Start with the logo <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <a class="btn btn--ghost" href="Assets/Continia_BrandGuide_2.0_compressed.pdf" download><svg aria-hidden="true"><use href="#i-download"/></svg>Download PDF</a>
+        <a class="btn btn--innovation" href="#logo">Start with the logo <i class="fa-light fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="btn btn--ghost" href="Assets/Continia_BrandGuide_2.0_compressed.pdf" download><i class="fa-light fa-download" aria-hidden="true"></i>Download PDF</a>
       </div>
     </div>
   </section>
 
   <div class="wrap">
     <nav class="quick" aria-label="Chapters">
-      <a href="#core-values"><span>01</span>Core values</a>
-      <a href="#brand-story"><span>02</span>Brand story</a>
-      <a href="#logo"><span>03</span>Our logo</a>
-      <a href="#graphics"><span>04</span>Graphics &amp; 5th element</a>
-      <a href="#colors"><span>05</span>Our colors</a>
-      <a href="#typography"><span>06</span>Typography</a>
-      <a href="#icons"><span>07</span>Icons</a>
-      <a href="#photography"><span>08</span>Photography</a>
-      <a href="#print"><span>09</span>Print media</a>
-      <a href="#digital"><span>10</span>Digital media</a>
-      <a href="#video"><span>11</span>Videography</a>
-      <a href="#assets"><span>12</span>Brand assets</a>
+      <a href="#core-values"><span class="icon-tile"><i class="fa-kit fa-handshake-light" aria-hidden="true"></i></span><span class="quick__txt"><small>01</small>Core values</span></a>
+      <a href="#brand-story"><span class="icon-tile"><i class="fa-light fa-book-open" aria-hidden="true"></i></span><span class="quick__txt"><small>02</small>Brand story</span></a>
+      <a href="#logo"><span class="icon-tile"><i class="fa-light fa-signature" aria-hidden="true"></i></span><span class="quick__txt"><small>03</small>Our logo</span></a>
+      <a href="#graphics"><span class="icon-tile"><i class="fa-light fa-shapes" aria-hidden="true"></i></span><span class="quick__txt"><small>04</small>Graphics &amp; 5th element</span></a>
+      <a href="#colors"><span class="icon-tile"><i class="fa-light fa-palette" aria-hidden="true"></i></span><span class="quick__txt"><small>05</small>Our colors</span></a>
+      <a href="#typography"><span class="icon-tile"><i class="fa-light fa-font" aria-hidden="true"></i></span><span class="quick__txt"><small>06</small>Typography</span></a>
+      <a href="#icons"><span class="icon-tile"><i class="fa-light fa-icons" aria-hidden="true"></i></span><span class="quick__txt"><small>07</small>Icons</span></a>
+      <a href="#photography"><span class="icon-tile"><i class="fa-light fa-camera" aria-hidden="true"></i></span><span class="quick__txt"><small>08</small>Photography</span></a>
+      <a href="#print"><span class="icon-tile"><i class="fa-kit fa-printing" aria-hidden="true"></i></span><span class="quick__txt"><small>09</small>Print media</span></a>
+      <a href="#digital"><span class="icon-tile"><i class="fa-light fa-display" aria-hidden="true"></i></span><span class="quick__txt"><small>10</small>Digital media</span></a>
+      <a href="#video"><span class="icon-tile"><i class="fa-light fa-video" aria-hidden="true"></i></span><span class="quick__txt"><small>11</small>Videography</span></a>
+      <a href="#assets"><span class="icon-tile"><i class="fa-light fa-folder-open" aria-hidden="true"></i></span><span class="quick__txt"><small>12</small>Brand assets</span></a>
     </nav>
 
     <!-- ===================== 01 CORE VALUES ===================== -->
@@ -119,37 +110,37 @@
         <article class="value value--dark">
           <h4>We dig in</h4>
           <ul>
-            <li><svg><use href="#i-check"/></svg>We view challenges as exciting opportunities</li>
-            <li><svg><use href="#i-check"/></svg>We keep up-to-date and use the latest technology</li>
-            <li><svg><use href="#i-check"/></svg>We develop our skills and encourage high-quality solutions</li>
-            <li><svg><use href="#i-check"/></svg>We’re persistent and solution-driven</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We view challenges as exciting opportunities</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We keep up-to-date and use the latest technology</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We develop our skills and encourage high-quality solutions</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We’re persistent and solution-driven</li>
           </ul>
         </article>
         <article class="value value--light">
           <h4>We grow together</h4>
           <ul>
-            <li><svg><use href="#i-check"/></svg>We embrace and respect individual differences</li>
-            <li><svg><use href="#i-check"/></svg>We trust each other and value strong relations</li>
-            <li><svg><use href="#i-check"/></svg>We communicate respectfully</li>
-            <li><svg><use href="#i-check"/></svg>We give and receive constructive feedback</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We embrace and respect individual differences</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We trust each other and value strong relations</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We communicate respectfully</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We give and receive constructive feedback</li>
           </ul>
         </article>
         <article class="value value--dark">
           <h4>Count on Continia</h4>
           <ul>
-            <li><svg><use href="#i-check"/></svg>We practice a “can-do” attitude</li>
-            <li><svg><use href="#i-check"/></svg>We deliver what we promise in due time</li>
-            <li><svg><use href="#i-check"/></svg>We listen and share experiences, knowledge, and solutions</li>
-            <li><svg><use href="#i-check"/></svg>We’re accountable and always go the extra mile</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We practice a “can-do” attitude</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We deliver what we promise in due time</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We listen and share experiences, knowledge, and solutions</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We’re accountable and always go the extra mile</li>
           </ul>
         </article>
         <article class="value value--light">
           <h4>We work smart</h4>
           <ul>
-            <li><svg><use href="#i-check"/></svg>We share our knowledge and individual strengths</li>
-            <li><svg><use href="#i-check"/></svg>We’re innovative and driven by automation</li>
-            <li><svg><use href="#i-check"/></svg>We use our common sense</li>
-            <li><svg><use href="#i-check"/></svg>We benefit from diversity and various skillsets</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We share our knowledge and individual strengths</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We’re innovative and driven by automation</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We use our common sense</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>We benefit from diversity and various skillsets</li>
           </ul>
         </article>
       </div>
@@ -207,8 +198,8 @@
               <span class="eyebrow">Primary</span>
               <p>The primary version of Continia’s visual profile. In nearly every use case, this is the logo you should use.</p>
               <div class="logo-tile__dl">
-                <a class="btn btn--line btn--sm" href="Assets/logos/continia-primary-techblue.svg" download><svg><use href="#i-download"/></svg>Tech Blue SVG</a>
-                <a class="btn btn--line btn--sm" href="Assets/logos/continia-primary-white.svg" download><svg><use href="#i-download"/></svg>White SVG</a>
+                <a class="btn btn--line btn--sm" href="Assets/logos/continia-primary-techblue.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>Tech Blue SVG</a>
+                <a class="btn btn--line btn--sm" href="Assets/logos/continia-primary-white.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>White SVG</a>
               </div>
             </div>
           </div>
@@ -227,8 +218,8 @@
               <span class="eyebrow">Secondary</span>
               <p>Only for highly specific cases where the logomark has been relocated elsewhere on the canvas or visual surface of the design.</p>
               <div class="logo-tile__dl">
-                <a class="btn btn--line btn--sm" href="Assets/logos/continia-secondary-techblue.svg" download><svg><use href="#i-download"/></svg>Tech Blue SVG</a>
-                <a class="btn btn--line btn--sm" href="Assets/logos/continia-secondary-white.svg" download><svg><use href="#i-download"/></svg>White SVG</a>
+                <a class="btn btn--line btn--sm" href="Assets/logos/continia-secondary-techblue.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>Tech Blue SVG</a>
+                <a class="btn btn--line btn--sm" href="Assets/logos/continia-secondary-white.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>White SVG</a>
               </div>
             </div>
           </div>
@@ -253,8 +244,8 @@
               <span class="eyebrow">Logomark only</span>
               <p>The hourglass mark on its own — e.g. for avatars and small spaces.</p>
               <div class="logo-tile__dl">
-                <a class="btn btn--line btn--sm" href="Assets/logos/continia-logomark-techblue.svg" download><svg><use href="#i-download"/></svg>Tech Blue</a>
-                <a class="btn btn--line btn--sm" href="Assets/logos/continia-logomark-white.svg" download><svg><use href="#i-download"/></svg>White</a>
+                <a class="btn btn--line btn--sm" href="Assets/logos/continia-logomark-techblue.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>Tech Blue</a>
+                <a class="btn btn--line btn--sm" href="Assets/logos/continia-logomark-white.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>White</a>
               </div>
             </div>
           </div>
@@ -275,14 +266,14 @@
         <h3>Please do not</h3>
         <p>The same rules also apply to the solution logos.</p>
         <ul class="dont-list">
-          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Trim the logo.</li>
-          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Rotate or squash/stretch the logo.</li>
-          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Outline the logo.</li>
-          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Use obvious effects on the logo.</li>
-          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Use the logo on low-contrast backgrounds.</li>
-          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Fill the logo with gradients.</li>
-          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Change the spacing between the hourglass icon and “continia”.</li>
-          <li><span class="mark mark--no"><svg><use href="#i-x"/></svg></span>Change the color to anything other than Tech Blue, Innovation Blue, Light Blue or White.</li>
+          <li><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Trim the logo.</li>
+          <li><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Rotate or squash/stretch the logo.</li>
+          <li><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Outline the logo.</li>
+          <li><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Use obvious effects on the logo.</li>
+          <li><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Use the logo on low-contrast backgrounds.</li>
+          <li><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Fill the logo with gradients.</li>
+          <li><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Change the spacing between the hourglass icon and “continia”.</li>
+          <li><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Change the color to anything other than Tech Blue, Innovation Blue, Light Blue or White.</li>
         </ul>
         <div class="figs">
           <figure class="popup" data-p="11" data-cap="Logo misuse examples"></figure>
@@ -330,7 +321,7 @@
             <span class="btn btn--primary">See more</span>
             <span class="btn btn--innovation">See more</span>
             <span class="btn btn--purple">See more</span>
-            <svg class="ui-cursor" aria-hidden="true"><use href="#i-cursor"/></svg>
+            <i class="fa-kit fa-mouse-cursor ui-cursor" aria-hidden="true"></i>
           </div>
         </div>
         <div class="figs figs--2">
@@ -348,8 +339,8 @@
           <figure class="popup" data-p="24" data-cap="Variants: single, in line, stacked"></figure>
         </div>
         <div class="logo-tile__dl" style="margin-top:18px">
-          <a class="btn btn--line btn--sm" href="Assets/brand/fifth-element-single.svg" download><svg><use href="#i-download"/></svg>Single SVG</a>
-          <a class="btn btn--line btn--sm" href="Assets/brand/fifth-element-inline-innovation.svg" download><svg><use href="#i-download"/></svg>In line SVG</a>
+          <a class="btn btn--line btn--sm" href="Assets/brand/fifth-element-single.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>Single SVG</a>
+          <a class="btn btn--line btn--sm" href="Assets/brand/fifth-element-inline-innovation.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>In line SVG</a>
         </div>
         <div class="figs">
           <figure class="popup" data-p="25" data-cap="5th element as a tonal watermark on print"></figure>
@@ -371,7 +362,7 @@
         <div style="flex:.7;background:#fff7e3"></div>
         <div style="flex:.7;background:#983eae"></div>
       </div>
-      <p class="note"><svg aria-hidden="true"><use href="#i-info"/></svg><span>The size of each color represents its recommended use ratio. Click any color to copy its HEX code.</span></p>
+      <p class="note"><i class="fa-light fa-palette" aria-hidden="true"></i><span>The size of each color represents its recommended use ratio. Click any color to copy its HEX code.</span></p>
 
       <div class="block" id="primary-colors">
         <h3>Brand &amp; accent colors</h3>
@@ -501,13 +492,41 @@
     <!-- ===================== 07 ICONS ===================== -->
     <section class="chapter" id="icons" data-chapter="Icons">
       <span class="eyebrow">07 · Icons</span>
-      <h2>The Font Awesome library</h2>
-      <p class="lead">Our icons come from the Font Awesome library, and the <strong>light</strong> version is the common style across our brand. Icons can explain concepts or be used in a creative, illustrative way.</p>
-      <p class="note"><svg aria-hidden="true"><use href="#i-info"/></svg><span>Want access to the library? Please contact the marketing team.</span></p>
+      <h2>Icons</h2>
+      <p class="lead">Every Continia icon comes from <strong>Font Awesome Pro</strong>, loaded through our own kit. <strong>Classic light</strong> is the default style everywhere. Use icons to explain concepts, or in a creative, illustrative way.</p>
+      <p class="note"><i class="fa-light fa-circle-info" aria-hidden="true"></i><span>Want access to the Font Awesome library? Please contact the marketing team.</span></p>
+
+      <div class="block" id="icon-style">
+        <h3>Style</h3>
+        <p>Pick <strong>one style per surface</strong> and stick with it. Never mix light and solid on the same page, slide or asset.</p>
+        <div class="grid grid--3">
+          <div class="card">
+            <div class="icon-sample"><i class="fa-light fa-file-invoice" aria-hidden="true"></i><i class="fa-light fa-envelope" aria-hidden="true"></i><i class="fa-light fa-shield-keyhole" aria-hidden="true"></i></div>
+            <h4>Classic light <span class="tag tag--ok">Default</span></h4>
+            <p>The standard everywhere. Always use light on web and product UI.</p>
+          </div>
+          <div class="card">
+            <div class="icon-sample"><i class="fa-solid fa-file-invoice" aria-hidden="true"></i><i class="fa-solid fa-envelope" aria-hidden="true"></i><i class="fa-solid fa-shield-keyhole" aria-hidden="true"></i></div>
+            <h4>Classic solid <span class="tag">Allowed</span></h4>
+            <p>Allowed on other surfaces, such as decks and print, as long as the whole surface uses solid.</p>
+          </div>
+          <div class="card">
+            <h4>Not allowed</h4>
+            <ul class="do-list do-list--tight">
+              <li><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Regular, duotone, sharp, thin</li>
+              <li><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Multicolor icons</li>
+              <li><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Hand-drawn SVG icons</li>
+              <li><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Icons from other libraries</li>
+              <li><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Emoji</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note"><i class="fa-light fa-triangle-exclamation" aria-hidden="true"></i><span>The Front end design system still says “no solid”, while the Main system now allows it. Until the two are aligned, use <strong>light on web and product UI</strong> and keep solid for other surfaces.</span></p>
+      </div>
 
       <div class="block" id="icon-colors">
         <h3>Icon colors</h3>
-        <p>The only colors allowed for icons are Tech Blue, Innovation Blue, Light Blue and White. A gradient version combining Tech Blue and Innovation Blue is also acceptable.</p>
+        <p>Icons use <strong>only</strong> the primary palette: Tech Blue, Innovation Blue, Light Blue and White. The brand guide also allows a Tech Blue to Innovation Blue gradient on the icon itself.</p>
         <div class="icon-colors">
           <div class="icon-color"><i class="fa-light fa-bullseye-arrow" style="color:#052975" aria-hidden="true"></i><span>Tech Blue</span></div>
           <div class="icon-color"><i class="fa-light fa-bullseye-arrow" style="color:#8ff8ff" aria-hidden="true"></i><span>Innovation Blue</span></div>
@@ -515,40 +534,198 @@
           <div class="icon-color"><i class="fa-light fa-bullseye-arrow" style="color:#fff" aria-hidden="true"></i><span>White</span></div>
           <div class="icon-color"><i class="fa-light fa-bullseye-arrow grad" aria-hidden="true"></i><span>Tech / Inno gradient</span></div>
         </div>
+
+        <h4 class="sub">Color by background</h4>
+        <div class="grid grid--3">
+          <div class="ground ground--white"><i class="fa-light fa-file-import" style="color:#052975" aria-hidden="true"></i><p><strong>White / Light Blue</strong>Tech Blue icon</p></div>
+          <div class="ground ground--navy"><span><i class="fa-light fa-file-import" style="color:#fff" aria-hidden="true"></i><i class="fa-light fa-file-import" style="color:#8ff8ff" aria-hidden="true"></i></span><p><strong>Tech Blue</strong>White or Innovation Blue icon</p></div>
+          <div class="ground ground--white"><span class="icon-tile"><i class="fa-light fa-file-import" aria-hidden="true"></i></span><p><strong>Solid icon tile</strong>White or Tech Blue, whichever contrasts</p></div>
+        </div>
+        <p class="note"><i class="fa-light fa-lightbulb" aria-hidden="true"></i><span>Innovation Blue is a <em>signal light</em>: a small icon on navy is fine, but never use it as a large fill.</span></p>
+
+        <h4 class="sub">Status icons in product UI</h4>
+        <p class="sub-p">Product UI is the one exception. Status icons may use the semantic base colors (on icons, borders and fills only). Color is never the only signal: a state is always <strong>color + icon + word</strong>.</p>
+        <div class="status-row">
+          <span class="status status--red"><i class="fa-light fa-circle-xmark" aria-hidden="true"></i>Rejected</span>
+          <span class="status status--purple"><i class="fa-light fa-bolt" aria-hidden="true"></i>Auto</span>
+          <span class="status status--green"><i class="fa-light fa-circle-check" aria-hidden="true"></i>Approved</span>
+        </div>
+      </div>
+
+      <div class="block" id="icon-placement">
+        <h3>Placement &amp; containers</h3>
+        <p>Icons sit <strong>free on the background</strong>, or on a <strong>square/rounded tile in a solid primary color</strong>.</p>
+        <div class="placements">
+          <div class="placement">
+            <div class="placement__stage"><i class="fa-light fa-envelope" aria-hidden="true"></i></div>
+            <p><i class="fa-light fa-circle-check mark mark--yes" aria-hidden="true"></i>Free on the background</p>
+          </div>
+          <div class="placement">
+            <div class="placement__stage"><span class="icon-tile"><i class="fa-light fa-envelope" aria-hidden="true"></i></span></div>
+            <p><i class="fa-light fa-circle-check mark mark--yes" aria-hidden="true"></i>Standard tile: 48 × 48 px, 12 px radius, Tech Blue, white icon</p>
+          </div>
+          <div class="placement">
+            <div class="placement__stage placement__stage--navy"><span class="icon-tile icon-tile--brand"><i class="fa-light fa-envelope" aria-hidden="true"></i></span></div>
+            <p><i class="fa-light fa-circle-check mark mark--yes" aria-hidden="true"></i>Brand card on Tech Blue: tile becomes 12% white</p>
+          </div>
+          <div class="placement">
+            <div class="placement__stage"><span class="bad-quarter"><i class="fa-light fa-envelope" aria-hidden="true"></i></span></div>
+            <p><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Never inside a quarter or half circle</p>
+          </div>
+          <div class="placement">
+            <div class="placement__stage placement__stage--grad"><span class="icon-tile"><i class="fa-light fa-envelope" aria-hidden="true"></i></span></div>
+            <p><i class="fa-light fa-circle-xmark mark mark--no" aria-hidden="true"></i>Never put an icon tile on the gradient</p>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table class="specs">
+            <thead><tr><th>Context</th><th>Rule</th></tr></thead>
+            <tbody>
+              <tr><td>Dropdown menus</td><td>22 px Tech Blue icon gutter in front of each item</td></tr>
+              <tr><td>Inputs</td><td>Leading icon 14 px from the left; text padding 42 px</td></tr>
+              <tr><td>Callouts / info boxes</td><td>Plain bordered card with a colored <code>fa-light</code> icon carrying the meaning, never a colored left-border bar</td></tr>
+              <tr><td>Phone widths</td><td>Icon lists and icon rows stay left-aligned</td></tr>
+              <tr><td>Quarter circle</td><td>Only for image masks, agenda numbers and decorative corners. Half circles are not an approved shape</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="block" id="icon-bullets">
+        <h3>Checkmarks are our bullets</h3>
+        <p>Feature lists use checkmarks as the bullet glyph, not dots: <code>fa-light fa-check</code> or <code>fa-light fa-circle-check</code>.</p>
+        <div class="grid grid--2">
+          <ul class="card do-list check-demo">
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>Built inside Business Central</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>Quick setup from AppSource</li>
+            <li><i class="fa-light fa-check" aria-hidden="true"></i>Support from local partners</li>
+          </ul>
+          <ul class="card do-list check-demo">
+            <li><i class="fa-light fa-circle-check" aria-hidden="true"></i>Built inside Business Central</li>
+            <li><i class="fa-light fa-circle-check" aria-hidden="true"></i>Quick setup from AppSource</li>
+            <li><i class="fa-light fa-circle-check" aria-hidden="true"></i>Support from local partners</li>
+          </ul>
+        </div>
       </div>
 
       <div class="block" id="icon-words">
         <h3>Icons for specific words</h3>
-        <p>We associate particular icons with specific words. Use these so the same concept always looks the same.</p>
+        <p>We associate particular icons with specific words, so the same concept always looks the same. Click an icon to copy its class.</p>
         <div class="icon-grid icon-grid--words">
-          <div class="icon-cell"><i class="fa-light fa-inbox-in" aria-hidden="true"></i><span>Download</span><code>fa-inbox-in</code></div>
-          <div class="icon-cell"><i class="fa-light fa-hand-holding-dollar" aria-hidden="true"></i><span>Expense</span><code>fa-hand-holding-dollar</code></div>
-          <div class="icon-cell"><i class="fa-light fa-file-import" aria-hidden="true"></i><span>Import</span><code>fa-file-import</code></div>
-          <div class="icon-cell"><i class="fa-light fa-file-certificate" aria-hidden="true"></i><span>Certification</span><code>fa-file-certificate</code></div>
-          <div class="icon-cell"><i class="fa-light fa-envelope" aria-hidden="true"></i><span>Email</span><code>fa-envelope</code></div>
-          <div class="icon-cell"><i class="fa-light fa-screwdriver-wrench" aria-hidden="true"></i><span>Technical support</span><code>fa-screwdriver-wrench</code></div>
-          <div class="icon-cell"><i class="fa-light fa-shield-keyhole" aria-hidden="true"></i><span>Security</span><code>fa-shield-keyhole</code></div>
-          <div class="icon-cell"><i class="fa-light fa-file-invoice" aria-hidden="true"></i><span>Invoice</span><code>fa-file-invoice</code></div>
-          <div class="icon-cell"><i class="fa-light fa-rocket-launch" aria-hidden="true"></i><span>Release</span><code>fa-rocket-launch</code></div>
+          <button class="icon-cell" data-copy="fa-light fa-inbox-in"><i class="fa-light fa-inbox-in" aria-hidden="true"></i><span>Download</span><code>fa-inbox-in</code></button>
+          <button class="icon-cell" data-copy="fa-light fa-hand-holding-dollar"><i class="fa-light fa-hand-holding-dollar" aria-hidden="true"></i><span>Expense</span><code>fa-hand-holding-dollar</code></button>
+          <button class="icon-cell" data-copy="fa-light fa-file-import"><i class="fa-light fa-file-import" aria-hidden="true"></i><span>Import</span><code>fa-file-import</code></button>
+          <button class="icon-cell" data-copy="fa-light fa-file-certificate"><i class="fa-light fa-file-certificate" aria-hidden="true"></i><span>Certification</span><code>fa-file-certificate</code></button>
+          <button class="icon-cell" data-copy="fa-light fa-envelope"><i class="fa-light fa-envelope" aria-hidden="true"></i><span>Email</span><code>fa-envelope</code></button>
+          <button class="icon-cell" data-copy="fa-light fa-screwdriver-wrench"><i class="fa-light fa-screwdriver-wrench" aria-hidden="true"></i><span>Technical support</span><code>fa-screwdriver-wrench</code></button>
+          <button class="icon-cell" data-copy="fa-light fa-shield-keyhole"><i class="fa-light fa-shield-keyhole" aria-hidden="true"></i><span>Security</span><code>fa-shield-keyhole</code></button>
+          <button class="icon-cell" data-copy="fa-light fa-file-invoice"><i class="fa-light fa-file-invoice" aria-hidden="true"></i><span>Invoice</span><code>fa-file-invoice</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-release-continia-rocket-launch"><i class="fa-kit fa-release-continia-rocket-launch" aria-hidden="true"></i><span>Release</span><code>fa-release-continia-rocket-launch</code></button>
         </div>
         <div class="figs">
           <figure class="popup" data-p="38" data-cap="Icon rules — colors and word associations"></figure>
         </div>
       </div>
 
-      <div class="block" id="solution-icons">
-        <h3>Solution icons</h3>
-        <p>Continia’s own icons for the solutions live in the team’s Font Awesome kit and use the <code>fa-kit</code> prefix.</p>
+      <div class="block" id="custom-icons">
+        <h3>Continia custom icons</h3>
+        <p>Our own icons live in the kit and use the <code>fa-kit</code> prefix. With the wrong prefix they render blank. Always use them over generic icons when showing a Continia solution or module. Click to copy the class.</p>
+
+        <h4 class="sub">Solutions</h4>
         <div class="icon-grid">
-          <div class="icon-cell"><i class="fa-kit fa-document-capture-solution-dc-icon" aria-hidden="true"></i><span>Document Capture</span></div>
-          <div class="icon-cell"><i class="fa-kit fa-expense-management-solution-em-icon" aria-hidden="true"></i><span>Expense Management</span></div>
-          <div class="icon-cell"><i class="fa-kit fa-banking-solution-cb-icon" aria-hidden="true"></i><span>Continia Banking</span></div>
-          <div class="icon-cell"><i class="fa-kit fa-finance-solution-cf-add-modules--stack-icon" aria-hidden="true"></i><span>Continia Finance</span></div>
-          <div class="icon-cell"><i class="fa-kit fa-document-output-solution-do-icon-file-export" aria-hidden="true"></i><span>Document Output</span></div>
+          <button class="icon-cell" data-copy="fa-kit fa-document-capture-solution-dc-icon"><i class="fa-kit fa-document-capture-solution-dc-icon icon-dc" aria-hidden="true"></i><span>Document Capture</span></button>
+          <button class="icon-cell" data-copy="fa-kit fa-expense-management-solution-em-icon"><i class="fa-kit fa-expense-management-solution-em-icon" aria-hidden="true"></i><span>Expense Management</span></button>
+          <button class="icon-cell" data-copy="fa-kit fa-banking-solution-cb-icon"><i class="fa-kit fa-banking-solution-cb-icon" aria-hidden="true"></i><span>Continia Banking</span></button>
+          <button class="icon-cell" data-copy="fa-kit fa-finance-solution-cf-add-modules--stack-icon"><i class="fa-kit fa-finance-solution-cf-add-modules--stack-icon" aria-hidden="true"></i><span>Continia Finance</span></button>
+          <button class="icon-cell" data-copy="fa-kit fa-document-output-solution-do-icon-file-export"><i class="fa-kit fa-document-output-solution-do-icon-file-export" aria-hidden="true"></i><span>Document Output</span></button>
         </div>
+        <p class="note"><i class="fa-light fa-magnifying-glass-plus" aria-hidden="true"></i><span>Optical fix: the Document Capture icon renders about 18% small. Give it <code>transform: scale(1.18)</code> when it sits next to the other solution icons. It is applied above.</span></p>
+
+        <h4 class="sub">Modules</h4>
+        <div class="icon-grid">
+          <button class="icon-cell" data-copy="fa-kit fa-credit-card-transactions-feature-module-expense-management-em-icon"><i class="fa-kit fa-credit-card-transactions-feature-module-expense-management-em-icon" aria-hidden="true"></i><span>Credit card transactions</span><code>EM</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-mileage-feature-module-expense-management-em-car-icon"><i class="fa-kit fa-mileage-feature-module-expense-management-em-car-icon" aria-hidden="true"></i><span>Mileage</span><code>EM</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-per-diem-feature-module-expense-management-em-briefcase-icon"><i class="fa-kit fa-per-diem-feature-module-expense-management-em-briefcase-icon" aria-hidden="true"></i><span>Per diem</span><code>EM</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-direct-communication-feature-module-banking-cb-icon"><i class="fa-kit fa-direct-communication-feature-module-banking-cb-icon" aria-hidden="true"></i><span>Direct communication</span><code>CB</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-security-feature-module-banking-cb-icon"><i class="fa-kit fa-security-feature-module-banking-cb-icon" aria-hidden="true"></i><span>Security</span><code>CB</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-purchase-contracts-feature-module-document-capture-dc-overview-contract-icon"><i class="fa-kit fa-purchase-contracts-feature-module-document-capture-dc-overview-contract-icon" aria-hidden="true"></i><span>Purchase contracts</span><code>DC</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-security-feature-module-document-output-do-icon"><i class="fa-kit fa-security-feature-module-document-output-do-icon" aria-hidden="true"></i><span>Security</span><code>DO</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-general-ledger"><i class="fa-kit fa-general-ledger" aria-hidden="true"></i><span>General ledger</span><code>CF</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-treasury"><i class="fa-kit fa-treasury" aria-hidden="true"></i><span>Treasury</span><code>CF</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-factoring"><i class="fa-kit fa-factoring" aria-hidden="true"></i><span>Factoring</span><code>CF</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-installments"><i class="fa-kit fa-installments" aria-hidden="true"></i><span>Installments</span><code>CF</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-extended-fixed-assets"><i class="fa-kit fa-extended-fixed-assets" aria-hidden="true"></i><span>Extended fixed assets</span><code>CF</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-multi-level-payment-discount"><i class="fa-kit fa-multi-level-payment-discount" aria-hidden="true"></i><span>Multi-level payment discount</span><code>CF</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-l-open-entries"><i class="fa-kit fa-l-open-entries" aria-hidden="true"></i><span>Open entries</span><code>CF</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-file-storage"><i class="fa-kit fa-file-storage" aria-hidden="true"></i><span>File storage</span><code>misc</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-printing"><i class="fa-kit fa-printing" aria-hidden="true"></i><span>Printing</span><code>misc</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-iban-magnifying-glass"><i class="fa-kit fa-iban-magnifying-glass" aria-hidden="true"></i><span>IBAN lookup</span><code>misc</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-associations"><i class="fa-kit fa-associations" aria-hidden="true"></i><span>Associations</span><code>misc</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-associations-feature-module-finance-cf-link-icon"><i class="fa-kit fa-associations-feature-module-finance-cf-link-icon" aria-hidden="true"></i><span>Associations (link)</span><code>CF</code></button>
+        </div>
+
+        <h4 class="sub">Motif &amp; utility</h4>
+        <div class="icon-grid">
+          <button class="icon-cell" data-copy="fa-kit fa-mouse-cursor"><i class="fa-kit fa-mouse-cursor" aria-hidden="true"></i><span>Mouse cursor + click</span><code>brand motif</code></button>
+          <button class="icon-cell" data-copy="fa-kit fa-handshake-light"><i class="fa-kit fa-handshake-light" aria-hidden="true"></i><span>Handshake</span></button>
+          <button class="icon-cell" data-copy="fa-kit fa-release-continia-rocket-launch"><i class="fa-kit fa-release-continia-rocket-launch" aria-hidden="true"></i><span>Release</span></button>
+          <button class="icon-cell" data-copy="fa-kit fa-thief"><i class="fa-kit fa-thief" aria-hidden="true"></i><span>Thief</span></button>
+          <button class="icon-cell" data-copy="fa-kit fa-cancel"><i class="fa-kit fa-cancel" aria-hidden="true"></i><span>Cancel</span></button>
+        </div>
+      </div>
+
+      <div class="block" id="icon-code">
+        <h3>Using the icons on the web</h3>
+        <p>Load the Continia kit once per page, then use <code>fa-light</code> for standard icons and <code>fa-kit</code> for our own.</p>
         <div class="code"><button class="copy-code" type="button">Copy</button><pre>&lt;script src="https://kit.fontawesome.com/c11880975e.js" crossorigin="anonymous"&gt;&lt;/script&gt;
-&lt;i class="fa-light fa-download"&gt;&lt;/i&gt;
-&lt;i class="fa-kit fa-document-capture-solution-dc-icon"&gt;&lt;/i&gt;</pre></div>
+
+&lt;!-- standard icon --&gt;
+&lt;i class="fa-light fa-download" aria-hidden="true"&gt;&lt;/i&gt;
+
+&lt;!-- Continia icon --&gt;
+&lt;i class="fa-kit fa-banking-solution-cb-icon" aria-hidden="true"&gt;&lt;/i&gt;</pre></div>
+        <p class="note"><i class="fa-light fa-file-svg" aria-hidden="true"></i><span>Where a script can’t load (print, Figma, Express, decks), use the single-ink SVG exports from the design system’s icons asset group (<code>viewBox 0 0 512 512</code>, <code>fill="currentColor"</code>). Set the color where you place them, because they render black inside an <code>&lt;img&gt;</code>.</span></p>
+      </div>
+
+      <div class="block" id="social-icons">
+        <h3>The one exception: social logos</h3>
+        <p>Real social media logos, such as in the website footer, use Font Awesome <strong>brands</strong>, since they have no light version.</p>
+        <div class="table-scroll">
+          <table class="specs">
+            <thead><tr><th>Network</th><th>Class</th></tr></thead>
+            <tbody>
+              <tr><td>LinkedIn</td><td><button class="linkish" data-copy="fa-brands fa-linkedin-in"><code>fa-brands fa-linkedin-in</code></button></td></tr>
+              <tr><td>YouTube</td><td><button class="linkish" data-copy="fa-brands fa-youtube"><code>fa-brands fa-youtube</code></button></td></tr>
+              <tr><td>X</td><td><button class="linkish" data-copy="fa-brands fa-x-twitter"><code>fa-brands fa-x-twitter</code></button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note"><i class="fa-light fa-triangle-exclamation" aria-hidden="true"></i><span>The Continia kit does not include the Brands icons yet, so these classes render blank today. Ask the kit owner to enable Brands in the kit settings on fontawesome.com.</span></p>
+      </div>
+
+      <div class="block" id="icon-a11y">
+        <h3>Accessibility</h3>
+        <ul class="do-list">
+          <li><i class="fa-light fa-circle-check mark mark--yes" aria-hidden="true"></i><span>Decorative icons get <code>aria-hidden="true"</code>.</span></li>
+          <li><i class="fa-light fa-circle-check mark mark--yes" aria-hidden="true"></i><span>Icon-only buttons need an <code>aria-label</code>.</span></li>
+          <li><i class="fa-light fa-circle-check mark mark--yes" aria-hidden="true"></i><span>Touch targets around clickable icons are at least <strong>44 × 44 px</strong>, on desktop too.</span></li>
+        </ul>
+      </div>
+
+      <div class="block" id="icon-checklist">
+        <h3>Quick checklist</h3>
+        <div class="card">
+          <ul class="checklist">
+            <li><label><input type="checkbox"><span>Font Awesome Pro kit, classic <strong>light</strong> (or solid, one style per surface)</span></label></li>
+            <li><label><input type="checkbox"><span>Continia solution or module? Use <code>fa-kit</code></span></label></li>
+            <li><label><input type="checkbox"><span>Color is Tech Blue, Innovation Blue, Light Blue or White only</span></label></li>
+            <li><label><input type="checkbox"><span>Free on the background, or on a <strong>solid</strong> square/rounded tile</span></label></li>
+            <li><label><input type="checkbox"><span>Not inside a quarter circle or half circle</span></label></li>
+            <li><label><input type="checkbox"><span>Not on the gradient</span></label></li>
+            <li><label><input type="checkbox"><span>No emoji, hand-drawn SVGs, other libraries, duotone or multicolor</span></label></li>
+            <li><label><input type="checkbox"><span>States = color + icon + word</span></label></li>
+          </ul>
+        </div>
       </div>
 
       <div class="block" id="icons-in-use">
@@ -574,10 +751,10 @@
       <div class="block" id="photo-checklist">
         <h3>Photo checklist</h3>
         <ul class="do-list">
-          <li><span class="mark mark--yes"><svg><use href="#i-check"/></svg></span><span><strong>Feature our people.</strong> Real Continians, real offices, real partners and customers.</span></li>
-          <li><span class="mark mark--yes"><svg><use href="#i-check"/></svg></span><span><strong>Think composition.</strong> Leave room so the photo can be used in a graphical context with text.</span></li>
-          <li><span class="mark mark--yes"><svg><use href="#i-check"/></svg></span><span><strong>Apply our LUT.</strong> Use the preferred color profile for all photos — indoor or outdoor.</span></li>
-          <li><span class="mark mark--yes"><svg><use href="#i-check"/></svg></span><span><strong>Remove other brands.</strong> Retouch away unnecessary logos from images.</span></li>
+          <li><i class="fa-light fa-circle-check mark mark--yes" aria-hidden="true"></i><span><strong>Feature our people.</strong> Real Continians, real offices, real partners and customers.</span></li>
+          <li><i class="fa-light fa-circle-check mark mark--yes" aria-hidden="true"></i><span><strong>Think composition.</strong> Leave room so the photo can be used in a graphical context with text.</span></li>
+          <li><i class="fa-light fa-circle-check mark mark--yes" aria-hidden="true"></i><span><strong>Apply our LUT.</strong> Use the preferred color profile for all photos — indoor or outdoor.</span></li>
+          <li><i class="fa-light fa-circle-check mark mark--yes" aria-hidden="true"></i><span><strong>Remove other brands.</strong> Retouch away unnecessary logos from images.</span></li>
         </ul>
       </div>
 
@@ -689,7 +866,7 @@
             </tbody>
           </table>
         </div>
-        <p class="note"><svg aria-hidden="true"><use href="#i-info"/></svg><span>Use our preferred LUT for all filmed video, just like for photos.</span></p>
+        <p class="note"><i class="fa-light fa-video" aria-hidden="true"></i><span>Use our preferred LUT for all filmed video, just like for photos.</span></p>
         <div class="figs figs--2">
           <figure class="popup" data-p="66" data-cap="Shoot in 4K at 25 fps"></figure>
           <figure class="popup" data-p="67" data-cap="Recrop 4K to 1:1 for SoMe"></figure>
@@ -725,7 +902,7 @@
       <div class="block" id="downloads">
         <h3>Download here</h3>
         <div class="grid grid--3">
-          <div class="card"><h4>Brand guide 2.0 (PDF)</h4><p>The full 74-page guide.</p><p style="margin-top:16px"><a class="btn btn--primary btn--sm" href="Assets/Continia_BrandGuide_2.0_compressed.pdf" download><svg><use href="#i-download"/></svg>PDF · 10 MB</a></p></div>
+          <div class="card"><h4>Brand guide 2.0 (PDF)</h4><p>The full 74-page guide.</p><p style="margin-top:16px"><a class="btn btn--primary btn--sm" href="Assets/Continia_BrandGuide_2.0_compressed.pdf" download><i class="fa-light fa-download" aria-hidden="true"></i>PDF · 10 MB</a></p></div>
           <div class="card"><h4>Logos (SVG)</h4><p>Primary, secondary and logomark in Tech Blue and White.</p><p style="margin-top:16px"><a class="btn btn--line btn--sm" href="#logo-variants">Go to logos</a></p></div>
           <div class="card"><h4>5th element (SVG)</h4><p>Single and in-line variants.</p><p style="margin-top:16px"><a class="btn btn--line btn--sm" href="#fifth-element">Go to 5th element</a></p></div>
         </div>
@@ -742,7 +919,7 @@
           <p>Templates, business cards, brochures and more are on our internal server and in the marketing repository. Contact the marketing team for access.</p>
         </div>
         <div class="actions">
-          <a class="btn btn--innovation" href="Assets/Continia_BrandGuide_2.0_compressed.pdf" download><svg><use href="#i-download"/></svg>Brand guide PDF</a>
+          <a class="btn btn--innovation" href="Assets/Continia_BrandGuide_2.0_compressed.pdf" download><i class="fa-light fa-download" aria-hidden="true"></i>Brand guide PDF</a>
         </div>
       </div>
     </section>
@@ -757,7 +934,7 @@
 </main>
 
 <dialog class="lightbox" id="lightbox" aria-label="Enlarged image">
-  <button class="lightbox__close" type="button" aria-label="Close"><svg><use href="#i-x"/></svg></button>
+  <button class="lightbox__close" type="button" aria-label="Close"><i class="fa-light fa-xmark" aria-hidden="true"></i></button>
   <p></p>
 </dialog>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>

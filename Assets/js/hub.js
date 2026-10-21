@@ -77,7 +77,7 @@
     index.push({ id: sec.id, title: h2 ? h2.textContent : chapter, chapter: chapter, text: sec.textContent.toLowerCase() });
     $$(".block[id]", sec).forEach(function (b) {
       var h3 = $("h3", b);
-      index.push({ id: b.id, title: h3 ? h3.textContent : b.id, chapter: chapter, text: b.textContent.toLowerCase() });
+      index.push({ id: b.id, title: h3 ? h3.textContent : b.id, chapter: chapter, sub: true, text: b.textContent.toLowerCase() });
     });
   });
 
@@ -96,7 +96,8 @@
     activeIdx = -1;
     results.innerHTML = hits.length
       ? hits.map(function (h) {
-          return '<li><a href="#' + h.id + '"><small>' + h.chapter + "</small>" + h.title + "</a></li>";
+          var icon = h.sub ? "fa-hashtag" : "fa-bookmark";
+          return '<li><a href="#' + h.id + '"><i class="fa-light ' + icon + '" aria-hidden="true"></i><span><small>' + h.chapter + "</small>" + h.title + "</span></a></li>";
         }).join("")
       : '<li class="search__empty">No matches for “' + q.replace(/</g, "&lt;") + "”</li>";
     results.hidden = false;
