@@ -117,7 +117,9 @@ p { margin: 0; }
 .sidebar__tag {
   margin-top: 14px;
   font-size: 0.8125rem;
+  font-weight: 700;
   line-height: 1.35;
+  white-space: nowrap;
   color: var(--c-innovation-blue);
 }
 
@@ -267,7 +269,7 @@ p { margin: 0; }
 .hero .wrap { position: relative; z-index: 2; }
 .hero .eyebrow { color: var(--c-innovation-blue); font-size: 0.9375rem; font-weight: 700; letter-spacing: 0; text-transform: none; }
 .hero h1 { color: var(--c-white); font-size: var(--fs-display); line-height: 1.02; letter-spacing: -0.02em; }
-.hero h1 span { font-weight: 300; color: var(--c-innovation-blue); }
+.hero h1 span { color: var(--c-innovation-blue); }
 .hero p { font-size: var(--fs-lead); max-width: 52ch; margin-top: 22px; color: rgba(255, 255, 255, 0.88); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 
