@@ -186,4 +186,14 @@
     });
     box.addEventListener("click", function (e) { if (e.target === box || e.target.closest(".lightbox__close")) box.close(); });
   }
+
+  /* ---------- hero video ---------- */
+  // Some browsers drop the muted attribute on autoplay; set it as a property
+  // and call play() so the clip never gets blocked.
+  var vid = document.querySelector(".hero__vid");
+  if (vid && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    vid.muted = true;
+    var played = vid.play();
+    if (played && played.catch) played.catch(function () {});
+  }
 })();
