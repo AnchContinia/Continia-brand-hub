@@ -90,21 +90,45 @@
     </div>
   </section>
 
+  <!-- Chapter band. The list is in the strip twice and the strip travels -50%,
+       so the second copy lands where the first started and the loop is
+       seamless. The copy is hidden from assistive tech and the tab order. -->
+  <nav class="band" aria-label="Chapters">
+    <div class="band__track">
+      <div class="band__strip">
+        <ul>
+          <li><a href="#core-values"><i class="fa-kit fa-handshake-light" aria-hidden="true"></i><small>01</small>Core values</a></li>
+          <li><a href="#brand-story"><i class="fa-light fa-book-open" aria-hidden="true"></i><small>02</small>Brand story</a></li>
+          <li><a href="#logo"><i class="fa-light fa-signature" aria-hidden="true"></i><small>03</small>Our logo</a></li>
+          <li><a href="#graphics"><i class="fa-light fa-shapes" aria-hidden="true"></i><small>04</small>Graphics &amp; 5th element</a></li>
+          <li><a href="#colors"><i class="fa-light fa-palette" aria-hidden="true"></i><small>05</small>Our colors</a></li>
+          <li><a href="#typography"><i class="fa-light fa-font" aria-hidden="true"></i><small>06</small>Typography</a></li>
+          <li><a href="#icons"><i class="fa-light fa-icons" aria-hidden="true"></i><small>07</small>Icons</a></li>
+          <li><a href="#photography"><i class="fa-light fa-camera" aria-hidden="true"></i><small>08</small>Photography</a></li>
+          <li><a href="#print"><i class="fa-kit fa-printing" aria-hidden="true"></i><small>09</small>Print media</a></li>
+          <li><a href="#digital"><i class="fa-light fa-display" aria-hidden="true"></i><small>10</small>Digital media</a></li>
+          <li><a href="#video"><i class="fa-light fa-video" aria-hidden="true"></i><small>11</small>Videography</a></li>
+          <li><a href="#assets"><i class="fa-light fa-folder-open" aria-hidden="true"></i><small>12</small>Brand assets</a></li>
+        </ul>
+        <ul aria-hidden="true">
+          <li><a href="#core-values" tabindex="-1"><i class="fa-kit fa-handshake-light" aria-hidden="true"></i><small>01</small>Core values</a></li>
+          <li><a href="#brand-story" tabindex="-1"><i class="fa-light fa-book-open" aria-hidden="true"></i><small>02</small>Brand story</a></li>
+          <li><a href="#logo" tabindex="-1"><i class="fa-light fa-signature" aria-hidden="true"></i><small>03</small>Our logo</a></li>
+          <li><a href="#graphics" tabindex="-1"><i class="fa-light fa-shapes" aria-hidden="true"></i><small>04</small>Graphics &amp; 5th element</a></li>
+          <li><a href="#colors" tabindex="-1"><i class="fa-light fa-palette" aria-hidden="true"></i><small>05</small>Our colors</a></li>
+          <li><a href="#typography" tabindex="-1"><i class="fa-light fa-font" aria-hidden="true"></i><small>06</small>Typography</a></li>
+          <li><a href="#icons" tabindex="-1"><i class="fa-light fa-icons" aria-hidden="true"></i><small>07</small>Icons</a></li>
+          <li><a href="#photography" tabindex="-1"><i class="fa-light fa-camera" aria-hidden="true"></i><small>08</small>Photography</a></li>
+          <li><a href="#print" tabindex="-1"><i class="fa-kit fa-printing" aria-hidden="true"></i><small>09</small>Print media</a></li>
+          <li><a href="#digital" tabindex="-1"><i class="fa-light fa-display" aria-hidden="true"></i><small>10</small>Digital media</a></li>
+          <li><a href="#video" tabindex="-1"><i class="fa-light fa-video" aria-hidden="true"></i><small>11</small>Videography</a></li>
+          <li><a href="#assets" tabindex="-1"><i class="fa-light fa-folder-open" aria-hidden="true"></i><small>12</small>Brand assets</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <div class="wrap">
-    <nav class="quick" aria-label="Chapters">
-      <a href="#core-values"><span class="icon-tile"><i class="fa-kit fa-handshake-light" aria-hidden="true"></i></span><span class="quick__txt"><small>01</small>Core values</span></a>
-      <a href="#brand-story"><span class="icon-tile"><i class="fa-light fa-book-open" aria-hidden="true"></i></span><span class="quick__txt"><small>02</small>Brand story</span></a>
-      <a href="#logo"><span class="icon-tile"><i class="fa-light fa-signature" aria-hidden="true"></i></span><span class="quick__txt"><small>03</small>Our logo</span></a>
-      <a href="#graphics"><span class="icon-tile"><i class="fa-light fa-shapes" aria-hidden="true"></i></span><span class="quick__txt"><small>04</small>Graphics &amp; 5th element</span></a>
-      <a href="#colors"><span class="icon-tile"><i class="fa-light fa-palette" aria-hidden="true"></i></span><span class="quick__txt"><small>05</small>Our colors</span></a>
-      <a href="#typography"><span class="icon-tile"><i class="fa-light fa-font" aria-hidden="true"></i></span><span class="quick__txt"><small>06</small>Typography</span></a>
-      <a href="#icons"><span class="icon-tile"><i class="fa-light fa-icons" aria-hidden="true"></i></span><span class="quick__txt"><small>07</small>Icons</span></a>
-      <a href="#photography"><span class="icon-tile"><i class="fa-light fa-camera" aria-hidden="true"></i></span><span class="quick__txt"><small>08</small>Photography</span></a>
-      <a href="#print"><span class="icon-tile"><i class="fa-kit fa-printing" aria-hidden="true"></i></span><span class="quick__txt"><small>09</small>Print media</span></a>
-      <a href="#digital"><span class="icon-tile"><i class="fa-light fa-display" aria-hidden="true"></i></span><span class="quick__txt"><small>10</small>Digital media</span></a>
-      <a href="#video"><span class="icon-tile"><i class="fa-light fa-video" aria-hidden="true"></i></span><span class="quick__txt"><small>11</small>Videography</span></a>
-      <a href="#assets"><span class="icon-tile"><i class="fa-light fa-folder-open" aria-hidden="true"></i></span><span class="quick__txt"><small>12</small>Brand assets</span></a>
-    </nav>
 
     <!-- ===================== 01 CORE VALUES ===================== -->
     <section class="chapter" id="core-values" data-chapter="Core values">
