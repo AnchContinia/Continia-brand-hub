@@ -912,13 +912,25 @@
       </div>
 
       <div class="contact">
-        <div>
+        <video class="contact__vid" muted loop playsinline preload="none" aria-hidden="true">
+          <source src="Assets/video/brand-clouds.webm" type="video/webm">
+          <source src="Assets/video/brand-clouds.mp4" type="video/mp4">
+        </video>
+        <div class="contact__body">
+          <span class="eyebrow">Brand assets</span>
           <h3>Need templates or other brand files?</h3>
-          <p>Templates, business cards, brochures and more are on our internal server and in the marketing repository. Contact the marketing team for access.</p>
+          <p>Everything lives on our internal server and in the marketing repository. Get in touch and we’ll give you access.</p>
+          <div class="actions">
+            <a class="btn btn--purple" href="mailto:anch@continia.com"><i class="fa-light fa-envelope" aria-hidden="true"></i>Contact us</a>
+            <a class="contact__mail" href="mailto:anch@continia.com">anch@continia.com</a>
+          </div>
         </div>
-        <div class="actions">
-          <a class="btn btn--purple" href="mailto:anch@continia.com"><i class="fa-light fa-envelope" aria-hidden="true"></i>Contact us</a>
-        </div>
+        <ul class="contact__list">
+          <li><i class="fa-light fa-presentation-screen" aria-hidden="true"></i>PowerPoint templates</li>
+          <li><i class="fa-light fa-file-word" aria-hidden="true"></i>Word templates</li>
+          <li><i class="fa-light fa-address-card" aria-hidden="true"></i>Business cards</li>
+          <li><i class="fa-light fa-newspaper" aria-hidden="true"></i>Brochures and flyers</li>
+        </ul>
       </div>
     </section>
   </div>

@@ -187,13 +187,24 @@
     box.addEventListener("click", function (e) { if (e.target === box || e.target.closest(".lightbox__close")) box.close(); });
   }
 
-  /* ---------- hero video ---------- */
-  // Some browsers drop the muted attribute on autoplay; set it as a property
-  // and call play() so the clip never gets blocked.
-  var vid = document.querySelector(".hero__vid");
-  if (vid && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    vid.muted = true;
-    var played = vid.play();
-    if (played && played.catch) played.catch(function () {});
+  /* ---------- cloud videos ---------- */
+  // Hero and contact banner share the clouds clip. Each plays only while on
+  // screen. Some browsers drop the muted attribute on autoplay, so set it as
+  // a property and call play() so the clip never gets blocked.
+  var vids = document.querySelectorAll(".hero__vid, .contact__vid");
+  if (vids.length && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var play = function (v) {
+      v.muted = true;
+      var played = v.play();
+      if (played && played.catch) played.catch(function () {});
+    };
+    if ("IntersectionObserver" in window) {
+      var vio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) play(e.target); else e.target.pause(); });
+      });
+      vids.forEach(function (v) { vio.observe(v); });
+    } else {
+      vids.forEach(play);
+    }
   }
 })();

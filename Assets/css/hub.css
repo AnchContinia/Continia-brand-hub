@@ -602,18 +602,36 @@ p { margin: 0; }
   background: var(--c-tech-blue);
   color: var(--c-white);
   border-radius: var(--radius-xl);
-  padding: 48px;
+  padding: 64px;
   display: grid;
-  grid-template-columns: minmax(0, 46ch) auto;
-  justify-content: start;
-  gap: 32px 56px;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 40px 72px;
   align-items: center;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
-.contact h3 { color: var(--c-white); font-size: clamp(1.75rem, calc(1.3rem + 1.2vw), 2.375rem); line-height: 1.12; }
-.contact p { color: rgba(255,255,255,.8); margin-top: 14px; font-size: var(--fs-lead); line-height: 1.55; }
-.contact .actions { display: flex; flex-wrap: wrap; gap: 12px; position: relative; }
+/* Same clouds and scrim as the hero, so the page opens and closes on the sky. */
+.contact__vid { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(100deg, rgba(5, 41, 117, 0.86) 0%, rgba(5, 41, 117, 0.72) 55%, rgba(5, 41, 117, 0.58) 100%);
+}
+@media (prefers-reduced-motion: reduce) { .contact__vid { display: none; } }
+.contact .eyebrow { color: var(--c-innovation-blue); font-size: 0.9375rem; font-weight: 700; letter-spacing: 0; text-transform: none; }
+.contact h3 { color: var(--c-white); font-size: clamp(1.875rem, calc(1.3rem + 1.4vw), 2.625rem); line-height: 1.1; letter-spacing: -0.02em; max-width: 16ch; }
+.contact p { color: rgba(255,255,255,.82); margin-top: 16px; font-size: var(--fs-lead); line-height: 1.55; max-width: 44ch; }
+.contact .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 32px; }
+.contact__mail { display: inline-flex; align-items: center; min-height: 44px; color: var(--c-white); font-weight: 600; text-decoration: underline; text-decoration-color: rgba(143, 248, 255, .6); text-underline-offset: 4px; }
+.contact__mail:hover { color: var(--c-innovation-blue); text-decoration-color: currentColor; }
+.contact__list { list-style: none; margin: 0; padding: 0; }
+.contact__list li { display: flex; align-items: center; gap: 16px; padding: 18px 0; font-size: 1.0625rem; font-weight: 600; border-top: 1px solid rgba(255, 255, 255, .16); }
+.contact__list li:last-child { border-bottom: 1px solid rgba(255, 255, 255, .16); }
+.contact__list i { width: 28px; text-align: center; font-size: 1.375rem; color: var(--c-innovation-blue); }
 
 .footer { padding: 56px 0 64px; color: var(--color-text-muted); font-size: var(--fs-sm); }
 .footer .wrap { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; border-top: 1px solid var(--color-border); padding-top: 28px; }
