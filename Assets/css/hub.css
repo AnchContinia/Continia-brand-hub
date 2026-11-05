@@ -248,8 +248,12 @@ p { margin: 0; }
   overflow: hidden;
   background: var(--c-tech-blue);
   color: var(--c-white);
-  padding: 104px 0 96px;
+  padding: 120px 0 112px;
+  min-height: min(78vh, 760px);
+  display: flex;
+  align-items: center;
 }
+.hero > .wrap { width: 100%; }
 /* Brand clouds clip, same file and treatment as the new-web front page:
    a Tech Blue scrim, heaviest at the top-left where the copy sits, keeps
    white and Innovation Blue type legible over the brightest frames. */
@@ -685,7 +689,7 @@ p { margin: 0; }
 
 @media (max-width: 640px) {
   .wrap { padding: 0 16px; }
-  .hero { padding: 64px 0 56px; }
+  .hero { padding: 72px 0 64px; min-height: 0; }
   .chapter { padding-top: 64px; }
   .chapter + .chapter { margin-top: 48px; }
   .block { margin-top: 48px; }
