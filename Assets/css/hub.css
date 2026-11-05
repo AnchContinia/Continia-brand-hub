@@ -271,11 +271,13 @@ p { margin: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .hero__vid { display: none; } }
 .hero .wrap { position: relative; z-index: 2; }
-.hero .eyebrow { color: var(--c-innovation-blue); font-size: 0.9375rem; font-weight: 700; letter-spacing: 0; text-transform: none; }
-.hero h1 { color: var(--c-white); font-size: var(--fs-display); line-height: 1.02; letter-spacing: -0.02em; }
+.hero .eyebrow { color: var(--c-innovation-blue); font-size: clamp(1rem, calc(0.85rem + 0.35vw), 1.25rem); margin-bottom: 18px; font-weight: 700; letter-spacing: 0; text-transform: none; }
+.hero h1 { color: var(--c-white); font-size: clamp(3rem, calc(1.6rem + 4.8vw), 6.25rem); line-height: 1; letter-spacing: -0.025em; }
 .hero h1 span { color: var(--c-innovation-blue); }
-.hero p { font-size: var(--fs-lead); max-width: 52ch; margin-top: 22px; color: rgba(255, 255, 255, 0.88); }
-.hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.hero p { font-size: clamp(1.1875rem, calc(1rem + 0.45vw), 1.5rem); line-height: 1.5; max-width: 50ch; margin-top: 28px; color: rgba(255, 255, 255, 0.88); }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 44px; }
+.hero__actions .btn { padding: 18px 32px; font-size: 0.9375rem; }
+.hero__actions .btn i { font-size: 18px; }
 
 /* ---------- buttons ---------- */
 .btn {
@@ -626,8 +628,6 @@ p { margin: 0; }
 .contact h3 { color: var(--c-white); font-size: clamp(1.875rem, calc(1.3rem + 1.4vw), 2.625rem); line-height: 1.1; letter-spacing: -0.02em; max-width: 16ch; }
 .contact p { color: rgba(255,255,255,.82); margin-top: 16px; font-size: var(--fs-lead); line-height: 1.55; max-width: 44ch; }
 .contact .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 32px; }
-.contact__mail { display: inline-flex; align-items: center; min-height: 44px; color: var(--c-white); font-weight: 600; text-decoration: underline; text-decoration-color: rgba(143, 248, 255, .6); text-underline-offset: 4px; }
-.contact__mail:hover { color: var(--c-innovation-blue); text-decoration-color: currentColor; }
 .contact__list { list-style: none; margin: 0; padding: 0; }
 .contact__list li { display: flex; align-items: center; gap: 16px; padding: 18px 0; font-size: 1.0625rem; font-weight: 600; border-top: 1px solid rgba(255, 255, 255, .16); }
 .contact__list li:last-child { border-bottom: 1px solid rgba(255, 255, 255, .16); }
