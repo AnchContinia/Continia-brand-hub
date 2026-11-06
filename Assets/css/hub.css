@@ -268,7 +268,10 @@ p { margin: 0; }
 @media (prefers-reduced-motion: reduce) { .hero__vid { display: none; } }
 .hero .wrap { position: relative; z-index: 2; }
 .hero .eyebrow { color: var(--c-innovation-blue); font-size: clamp(1rem, calc(0.85rem + 0.35vw), 1.25rem); margin-bottom: 18px; font-weight: 700; letter-spacing: 0; text-transform: none; }
-.hero h1 { color: var(--c-white); font-size: clamp(3rem, calc(1.6rem + 4.8vw), 6.25rem); line-height: 1; letter-spacing: -0.025em; }
+/* Sized by the text column, not the viewport, so "Brand guidelines 3.0"
+   always fits on one line; the line is about 9.4em wide. */
+.hero > .wrap { container-type: inline-size; }
+.hero h1 { color: var(--c-white); font-size: min(6rem, 10cqi); line-height: 1; letter-spacing: -0.025em; white-space: nowrap; }
 .hero h1 span { color: var(--c-innovation-blue); }
 .hero p { font-size: clamp(1.1875rem, calc(1rem + 0.45vw), 1.5rem); line-height: 1.5; max-width: 50ch; margin-top: 28px; color: rgba(255, 255, 255, 0.88); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 44px; }
@@ -720,6 +723,7 @@ p { margin: 0; }
   .wrap { padding: 0 16px; }
   .hero { padding: 72px 0 64px; min-height: 0; }
   .band a { padding: 18px 20px; font-size: 0.9375rem; }
+  .hero h1 { font-size: clamp(2.75rem, 13cqi, 3.5rem); white-space: normal; }
   .chapter { padding-top: 64px; }
   .chapter + .chapter { margin-top: 48px; }
   .block { margin-top: 48px; }
