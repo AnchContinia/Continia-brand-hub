@@ -446,7 +446,6 @@ p { margin: 0; }
 }
 .logo-tile__stage { display: grid; place-items: center; min-height: 200px; padding: 40px 32px; }
 .logo-tile__stage img { max-height: 52px; width: auto; }
-.logo-tile__stage img.logo-secondary { max-height: 36px; }
 .logo-tile__stage img.logo-mark { max-height: 72px; }
 .logo-tile__stage img.logo-payoff { max-height: 108px; }
 .logo-tile__stage--dark { background: var(--c-tech-blue); }
@@ -455,6 +454,8 @@ p { margin: 0; }
 .logo-tile__body .eyebrow { margin: 0; }
 .logo-tile__body p { font-size: 0.9375rem; color: var(--c-slate-700); flex: 1; }
 .logo-tile__dl { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.logo-tile__dl .btn { padding: 8px 12px; gap: 6px; letter-spacing: 0.04em; }
+.logo-tile__dl .btn i { font-size: 13px; }
 
 
 .dont-list { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 28px; }
