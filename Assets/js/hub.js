@@ -189,7 +189,7 @@
   // Hero and contact banner share the clouds clip. Each plays only while on
   // screen. Some browsers drop the muted attribute on autoplay, so set it as
   // a property and call play() so the clip never gets blocked.
-  var vids = document.querySelectorAll(".hero__vid, .contact__vid");
+  var vids = document.querySelectorAll(".hero__vid, .payoff__vid, .contact__vid");
   if (vids.length && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     var play = function (v) {
       v.muted = true;
