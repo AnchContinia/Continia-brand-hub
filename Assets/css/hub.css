@@ -393,14 +393,7 @@ p { margin: 0; }
 .prose p { break-inside: avoid; margin-bottom: 16px; }
 
 /* ---------- figures (pop-up window UI element) ---------- */
-.popup {
-  margin: 0;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: var(--c-white);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--c-tech-blue-20);
-}
+.popup { margin: 0; }
 .popup__bar {
   display: flex;
   align-items: center;
@@ -415,24 +408,27 @@ p { margin: 0; }
 .popup__bar img { height: 12px; width: auto; }
 .popup__dots { margin-left: auto; display: flex; gap: 4px; }
 .popup__dots i { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,.7); }
+/* Guide pages: the full image in a 2px Tech Blue frame, caption below. */
 .popup button.zoom {
   display: block;
   width: 100%;
   padding: 0;
-  border: 0;
-  background: var(--c-slate-50);
+  border: 2px solid var(--c-tech-blue);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--c-white);
   cursor: zoom-in;
-  border-radius: 0;
+  transition: box-shadow 200ms var(--ease-standard);
 }
-.popup button.zoom img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.popup button.zoom:hover { box-shadow: var(--shadow-md); }
+.popup button.zoom img { display: block; width: 100%; height: auto; }
 .popup figcaption {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  padding: 12px 16px;
+  padding: 12px 4px 0;
   font-size: var(--fs-sm);
   color: var(--c-slate-700);
-  border-top: 1px solid var(--color-border);
 }
 .popup figcaption span { color: var(--c-tech-blue-50); white-space: nowrap; }
 .figs { display: grid; gap: 24px; margin-top: 28px; }
@@ -451,6 +447,7 @@ p { margin: 0; }
 .logo-tile__stage { display: grid; place-items: center; min-height: 200px; padding: 40px 32px; }
 .logo-tile__stage img { max-height: 52px; width: auto; }
 .logo-tile__stage img.logo-secondary { max-height: 36px; }
+.logo-tile__stage img.logo-mark { max-height: 72px; }
 .logo-tile__stage--dark { background: var(--c-tech-blue); }
 .logo-tile__stage--light { background: var(--c-light-blue); }
 .logo-tile__body { padding: 22px 24px 24px; border-top: 1px solid var(--color-border); flex: 1; display: flex; flex-direction: column; gap: 10px; }

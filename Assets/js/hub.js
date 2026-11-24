@@ -5,17 +5,15 @@
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
 
-  /* ---------- guide figures (pop-up window frame) ----------
+  /* ---------- guide figures ----------
      <figure class="popup" data-p="14" data-cap="Caption"></figure>
-     renders page 14 of the brand guide inside the UI-element frame. */
+     renders page 14 of the brand guide as a framed image with a caption. */
   $$("figure.popup[data-p]").forEach(function (fig) {
     var p = fig.getAttribute("data-p");
     var num = ("0" + p).slice(-2);
     var cap = fig.getAttribute("data-cap") || "";
     var src = "Assets/guide/p" + num + ".webp";
     fig.innerHTML =
-      '<div class="popup__bar"><img src="Assets/logos/continia-logomark-white.svg" alt="">continia' +
-      '<span class="popup__dots" aria-hidden="true"><i></i><i></i><i></i></span></div>' +
       '<button type="button" class="zoom" aria-label="Enlarge: ' + cap.replace(/"/g, "&quot;") + '">' +
       '<img src="' + src + '" alt="' + cap.replace(/"/g, "&quot;") + '" loading="lazy" decoding="async" width="1600" height="901"></button>' +
       "<figcaption>" + cap + "<span>Brand guide p. " + p + "</span></figcaption>";
