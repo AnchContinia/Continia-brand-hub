@@ -448,6 +448,7 @@ p { margin: 0; }
 .logo-tile__stage img { max-height: 52px; width: auto; }
 .logo-tile__stage img.logo-secondary { max-height: 36px; }
 .logo-tile__stage img.logo-mark { max-height: 72px; }
+.logo-tile__stage img.logo-payoff { max-height: 108px; }
 .logo-tile__stage--dark { background: var(--c-tech-blue); }
 .logo-tile__stage--light { background: var(--c-light-blue); }
 .logo-tile__body { padding: 22px 24px 24px; border-top: 1px solid var(--color-border); flex: 1; display: flex; flex-direction: column; gap: 10px; }
@@ -455,9 +456,6 @@ p { margin: 0; }
 .logo-tile__body p { font-size: 0.9375rem; color: var(--c-slate-700); flex: 1; }
 .logo-tile__dl { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
 
-.lockup-payoff { display: inline-flex; flex-direction: column; align-items: flex-end; }
-.lockup-payoff img { height: 52px; max-height: none; width: auto; }
-.lockup-payoff span { font-size: 1.0625rem; color: var(--c-tech-blue); margin-top: 2px; line-height: 1; }
 
 .dont-list { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 28px; }
 .dont-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.9375rem; color: var(--c-slate-700); }
@@ -478,12 +476,19 @@ p { margin: 0; }
 .demo__label span { font-size: var(--fs-sm); opacity: 0.8; }
 .qc { position: absolute; right: 0; top: 0; width: 62%; aspect-ratio: 1; border-bottom-left-radius: 100%; background: var(--c-light-blue); }
 .fc { position: absolute; right: 12%; top: 50%; width: 46%; aspect-ratio: 1; transform: translateY(-50%); border-radius: 50%; background: var(--c-light-blue); }
-.fifth-tile { display: grid; place-items: center; background: var(--c-tech-blue); border-radius: var(--radius-xl); min-height: 260px; padding: 36px; color: var(--c-innovation-blue); }
-.fifth-tile img, .fifth-tile svg { max-height: 180px; width: auto; }
-.fifth-tile--light { background: var(--c-light-blue); color: var(--c-tech-blue); }
+/* 5th element downloads: Innovation Blue card, Tech Blue artwork, text and button inside. */
+.fifth-grid { margin-top: 28px; }
+.fifth-card { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; background: var(--c-innovation-blue); border-radius: var(--radius-xl); padding: 32px 28px 28px; color: var(--c-tech-blue); }
+.fifth-card__art { align-self: stretch; display: grid; place-items: center; height: 180px; margin-bottom: 14px; }
+.fifth-card__art img { max-height: 130px; max-width: 100%; width: auto; }
+.fifth-card__art img.is-stacked { max-height: 172px; }
+.fifth-card h4 { font-size: 1.25rem; color: var(--c-tech-blue); }
+.fifth-card p { font-size: 0.9375rem; color: var(--c-tech-blue); flex: 1; }
+.fifth-card .btn { margin-top: 8px; }
 
 .ui-demo {
-  background: var(--c-tech-blue);
+  background: transparent;
+  border: 2px solid var(--c-tech-blue);
   border-radius: var(--radius-xl);
   padding: 44px;
   display: grid;
@@ -503,7 +508,7 @@ p { margin: 0; }
 .ui-window__line:nth-of-type(2) { width: 82%; }
 .ui-window__line:nth-of-type(3) { width: 64%; }
 .ui-stack { display: grid; gap: 12px; justify-items: start; position: relative; }
-.ui-cursor { font-size: 44px; line-height: 1; color: var(--c-white); margin-left: 70px; margin-top: -4px; }
+.ui-cursor { width: 44px; height: auto; margin-left: 70px; margin-top: -4px; }
 
 /* ---------- colors ---------- */
 .ratio { display: flex; height: 76px; border-radius: var(--radius-lg); overflow: hidden; margin-top: 28px; box-shadow: var(--shadow-sm); }

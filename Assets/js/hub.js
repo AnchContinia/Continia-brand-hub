@@ -16,7 +16,7 @@
     fig.innerHTML =
       '<button type="button" class="zoom" aria-label="Enlarge: ' + cap.replace(/"/g, "&quot;") + '">' +
       '<img src="' + src + '" alt="' + cap.replace(/"/g, "&quot;") + '" loading="lazy" decoding="async" width="1600" height="901"></button>' +
-      "<figcaption>" + cap + "<span>Brand guide p. " + p + "</span></figcaption>";
+      "<figcaption>" + cap + "</figcaption>";
   });
 
   /* ---------- mobile nav ---------- */
@@ -179,7 +179,7 @@
       boxImg.src = img.currentSrc || img.src;
       boxImg.alt = img.alt;
       var fc = z.parentNode.querySelector("figcaption");
-      boxCap.textContent = fc ? fc.textContent.replace(/Brand guide p\./, " · Brand guide p.") : "";
+      boxCap.textContent = fc ? fc.textContent : "";
       box.showModal();
     });
     box.addEventListener("click", function (e) { if (e.target === box || e.target.closest(".lightbox__close")) box.close(); });

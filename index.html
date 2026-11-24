@@ -16,11 +16,6 @@
 </head>
 <body>
 
-<!-- 5th element brand graphic -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="fifth" viewBox="0 0 1230.19 1139.72"><path fill="currentColor" d="M660.34,542.96h-18.35V53.77h533.75c-14.05,272.14-239.85,489.19-515.4,489.19M588.22,1085.96H54.45c14.04-272.14,239.85-489.22,515.42-489.22h18.35v489.22ZM588.22,0v542.96h-18.35C255.65,542.96,0,798.62,0,1112.84v26.88h641.99v-542.99h18.35c314.22,0,569.85-255.63,569.85-569.84V0h-641.97Z"/></symbol>
-</svg>
-
 <!-- ===================== mobile top bar ===================== -->
 <header class="topbar">
   <a href="#welcome"><img src="Assets/logos/continia-primary-white.svg" alt="Continia"></a>
@@ -230,11 +225,15 @@
           </div>
           <div class="logo-tile">
             <div class="logo-tile__stage">
-              <span class="lockup-payoff"><img src="Assets/logos/continia-primary-techblue.svg" alt="Continia logo with payoff"><span>It’s About Time</span></span>
+              <img class="logo-payoff" src="Assets/logos/continia-primary-payoff-techblue.svg" alt="Continia logo with payoff “It’s about time”">
             </div>
             <div class="logo-tile__body">
               <span class="eyebrow">Primary with payoff</span>
-              <p>Use only when the purpose is to highlight or emphasize “It’s about time.” Ask marketing for the production file.</p>
+              <p>Use only when the purpose is to highlight or emphasize “It’s about time.”</p>
+              <div class="logo-tile__dl">
+                <a class="btn btn--line btn--sm" href="Assets/logos/continia-primary-payoff-techblue.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>Tech Blue</a>
+                <a class="btn btn--line btn--sm" href="Assets/logos/continia-primary-payoff-white.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>White</a>
+              </div>
             </div>
           </div>
           <div class="logo-tile">
@@ -338,7 +337,7 @@
             <span class="btn btn--primary">See more</span>
             <span class="btn btn--innovation">See more</span>
             <span class="btn btn--purple">See more</span>
-            <i class="fa-kit fa-mouse-cursor ui-cursor" aria-hidden="true"></i>
+            <img class="ui-cursor" src="Assets/brand/cursor-click.png" alt="" aria-hidden="true">
           </div>
         </div>
         <div class="figs figs--2">
@@ -350,14 +349,25 @@
       <div class="block" id="fifth-element">
         <h3>The 5th element</h3>
         <p>The 5th element is a visual tool that promotes brand recognition across touchpoints, surfaces and visuals. Rooted in our payoff “It’s about time” and our secondary logo, it acts as a visual extension of our overall identity. It comes in three variants: single, in line and stacked.</p>
-        <div class="grid grid--3">
-          <div class="fifth-tile"><svg viewBox="0 0 1230.19 1139.72" role="img" aria-label="5th element, single"><use href="#fifth"/></svg></div>
-          <div class="fifth-tile fifth-tile--light"><img src="Assets/brand/fifth-element-inline-techblue.svg" alt="5th element, in line"></div>
-          <figure class="popup" data-p="24" data-cap="Variants: single, in line, stacked"></figure>
-        </div>
-        <div class="logo-tile__dl" style="margin-top:18px">
-          <a class="btn btn--line btn--sm" href="Assets/brand/fifth-element-single.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>Single SVG</a>
-          <a class="btn btn--line btn--sm" href="Assets/brand/fifth-element-inline-innovation.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>In line SVG</a>
+        <div class="grid grid--3 fifth-grid">
+          <div class="fifth-card">
+            <div class="fifth-card__art"><img src="Assets/brand/fifth-element-single.svg" alt="5th element, single"></div>
+            <h4>Single</h4>
+            <p>One element on its own. Use it as an accent on covers, slides and social posts.</p>
+            <a class="btn btn--primary btn--sm" href="Assets/brand/fifth-element-single.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>Download SVG</a>
+          </div>
+          <div class="fifth-card">
+            <div class="fifth-card__art"><img src="Assets/brand/fifth-element-inline-techblue.svg" alt="5th element, in line"></div>
+            <h4>In line</h4>
+            <p>Two elements side by side. Good for wide formats such as banners and email headers.</p>
+            <a class="btn btn--primary btn--sm" href="Assets/brand/fifth-element-inline-techblue.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>Download SVG</a>
+          </div>
+          <div class="fifth-card">
+            <div class="fifth-card__art"><img class="is-stacked" src="Assets/brand/fifth-element-stacked.svg" alt="5th element, stacked"></div>
+            <h4>Stacked</h4>
+            <p>Two elements on top of each other. Good for tall formats such as roll-ups and stories.</p>
+            <a class="btn btn--primary btn--sm" href="Assets/brand/fifth-element-stacked.svg" download><i class="fa-light fa-download" aria-hidden="true"></i>Download SVG</a>
+          </div>
         </div>
         <div class="figs">
           <figure class="popup" data-p="25" data-cap="5th element as a tonal watermark on print"></figure>
@@ -639,9 +649,6 @@
           <button class="icon-cell" data-copy="fa-light fa-file-invoice"><i class="fa-light fa-file-invoice" aria-hidden="true"></i><span>Invoice</span><code>fa-file-invoice</code></button>
           <button class="icon-cell" data-copy="fa-kit fa-release-continia-rocket-launch"><i class="fa-kit fa-release-continia-rocket-launch" aria-hidden="true"></i><span>Release</span><code>fa-release-continia-rocket-launch</code></button>
         </div>
-        <div class="figs">
-          <figure class="popup" data-p="38" data-cap="Icon rules — colors and word associations"></figure>
-        </div>
       </div>
 
       <div class="block" id="custom-icons">
@@ -915,19 +922,6 @@
       <span class="eyebrow">12 · Brand assets</span>
       <h2>Continia brand assets</h2>
       <p class="lead">The marketing team has developed a variety of brand assets for the entire organization — PowerPoint and Word templates, business cards, brochures, flyers and more. All aligned with these guidelines.</p>
-
-      <div class="block" id="downloads">
-        <h3>Download here</h3>
-        <div class="grid grid--2">
-          <div class="card"><h4>Logos (SVG)</h4><p>Primary, secondary and logomark in Tech Blue and White.</p><p style="margin-top:16px"><a class="btn btn--line btn--sm" href="#logo-variants">Go to logos</a></p></div>
-          <div class="card"><h4>5th element (SVG)</h4><p>Single and in-line variants.</p><p style="margin-top:16px"><a class="btn btn--line btn--sm" href="#fifth-element">Go to 5th element</a></p></div>
-        </div>
-      </div>
-
-      <div class="figs figs--2">
-        <figure class="popup" data-p="72" data-cap="Brand assets"></figure>
-        <figure class="popup" data-p="73" data-cap="Brand asset access"></figure>
-      </div>
 
       <div class="contact">
         <video class="contact__vid" muted loop playsinline preload="none" aria-hidden="true">
