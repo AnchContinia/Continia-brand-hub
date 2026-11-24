@@ -19,6 +19,31 @@
       "<figcaption>" + cap + "</figcaption>";
   });
 
+  /* ---------- light / dark theme ----------
+     The <head> script applies a saved choice before first paint;
+     this keeps the toggle buttons in sync and saves new choices. */
+  var root = document.documentElement;
+  var themeBtns = $$(".theme-toggle");
+  function syncTheme() {
+    var dark = root.getAttribute("data-theme") === "dark";
+    var label = dark ? "Switch to light mode" : "Switch to dark mode";
+    themeBtns.forEach(function (b) {
+      b.setAttribute("aria-pressed", dark ? "true" : "false");
+      b.setAttribute("aria-label", label);
+      b.title = label;
+      b.innerHTML = '<i class="fa-light ' + (dark ? "fa-sun-bright" : "fa-moon") + '" aria-hidden="true"></i>';
+    });
+  }
+  themeBtns.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("hub-theme", next); } catch (e) {}
+      syncTheme();
+    });
+  });
+  syncTheme();
+
   /* ---------- mobile nav ---------- */
   var body = document.body;
   var toggle = $("#nav-toggle");
